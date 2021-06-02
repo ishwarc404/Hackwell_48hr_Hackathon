@@ -10,7 +10,7 @@ import configurations
 
 
 file = 'data_manual_clean.docx'
-# file = 'original_data.docx'
+file = 'original_data.docx'
 
 # extract text
 text = docxpy.process(file)
@@ -30,17 +30,20 @@ for currentIndex in range(0,len(text)):
         instruction_description = text[currentIndex].strip()
 
         #checking for value now
-        value_required = False 
+        value_required = False  #this is set in the dataClassFile
         value_unit = None
+
+        #this checks and finds all occurances of any mention of a unit in the description
         try:
             value_unit = configurations.units_regex.findall(instruction_description)
             value_required = True
-            # print("Value unit is: ",value_unit)
         except:
             pass
  
         data = instructionDetails(instruction_number,instruction_description, value_required, value_unit)
-        data.printData()
+        
+        #refactorData basically cleans it a little more
+        data.refactorData()
         procedure_indices.append(currentIndex)
     
 print("xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx")

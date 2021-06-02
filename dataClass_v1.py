@@ -12,7 +12,7 @@ class instructionDetails :
         #type of value - single, multiple, range
 
 
-    def printData(self):
+    def refactorData(self):
         print("Id: {} Description: {}".format(self.id,self.description))
         if(self.value_required):
             #we need to remove any duplicates from the units list
@@ -34,11 +34,21 @@ class instructionDetails :
                 #we accept it only if it is allowed, else we keep 
                 if(joint_unit in configurations.units):
                     self.value_unit = joint_unit
+                    self.value_required = True
+                    
+                    #need to map - PCV is measured in %
+                    self.value_unit = self.unitsMap(self.value_unit)
                     if(self.value_unit != ''):
                         print("Value required and it's unit is: {}".format(self.value_unit))
 
         print("\n")
 
 
+
+    def unitsMap(self,value_unit):
+        if(value_unit in configurations.units_map.keys()):
+            return configurations.units_map[value_unit]
+        else:
+            return value_unit
 
 
