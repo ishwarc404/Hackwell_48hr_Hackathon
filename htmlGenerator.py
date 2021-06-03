@@ -30,7 +30,8 @@ def generateHTML():
     html_data = htmlCodeMapper.init()
     for each in data.keys():
         path = [each]
-        html_data += htmlCodeMapper.divWrapperBegin()  +  recursiveParse(data[each],path) +  htmlCodeMapper.divWrapperEnd()
+        label = "<br><h5 id={}' style='margin-right:10px ;'>{} {} </h5>".format(path,data[each]["Id"], data[each]["Description"])
+        html_data += htmlCodeMapper.divWrapperBegin()  + label + recursiveParse(data[each],path) +  htmlCodeMapper.divWrapperEnd()
 
 
     outerWrapperEnd = " </div><div><iframe  src='./jsonViewer.html' width='1000' height='6000' frameborder='0'></div></div> </div>"

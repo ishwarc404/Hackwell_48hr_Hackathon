@@ -164,19 +164,24 @@ while(iterationIndex < maxIndex):
 
 
         #change executer
+        
         for each_change in value_changes_requested:
+            # print(current_instruction_id)
             if(current_instruction_id[0:-1]  == each_change[0]):
                 change_requested = each_change[1] #can be ADD DELETE
                 tempvalue = each_change[2:] #this is still a list
                 new_value = ''
                 for each in tempvalue:
                     new_value += each + " "
+                # print(new_value)
+                # print(change_requested)
+                # print("------- \n")
                 data_storage = commonFunctions.updateDataStorage(current_instruction_id, new_value, change_requested , data_storage)
         
         #we need to clear the text file now
-        file =  open('changes.txt', 'r+')
-        file.truncate(0)
-        file.close
+        # file =  open('changes.txt', 'r+')
+        # file.truncate(0)
+        # file.close
                 
                 
 
