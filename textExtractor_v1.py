@@ -12,6 +12,7 @@ import configurations
 #functions
 import jsonConverter
 import commonFunctions
+import changeExecuter
 
 
 file = 'data_manual_clean.docx'
@@ -142,6 +143,8 @@ def findDotIndex(id):
 #TO PREVENT DUPLICATION OF DATA
 VISITED_IDS = []
 
+#Getting any necessary changes, on application restart
+value_changes_requested = changeExecuter.getChanges()
 
 #first we need to seperate out the parent instruction indices
 parentIndices = []
@@ -155,6 +158,20 @@ while(iterationIndex < maxIndex):
         levelNumbers.remove('')
         #these level numbers are in string format, need to convert into number
         indexOfDots = findDotIndex(current_instruction_id)
+
+
+
+        #change executer
+        for each_change in value_changes_requested:
+            if(current_instruction_id[0:-1]  == each_change[0]):
+                change_requested = each_change[1] #can be ADD DELETE
+                tempvalue = each_change[2:] #this is still a list
+                new_value = ''
+                for each in tempvalue:
+                    new_value += each + " "
+                data_storage = commonFunctions.updateDataStorage(current_instruction_id, new_value, change_requested , data_storage)
+                
+                
 
         #if parent
         if(numberOfLevels == 1):
@@ -182,6 +199,10 @@ while(iterationIndex < maxIndex):
             parentPools[childPoolNumber][current_instruction_id[0:-1]].update(commonFunctions.getDetailsById(current_instruction_id, data_storage))
 
             VISITED_IDS.append(current_instruction_id)  #TO PREVENT DUPLICATION OF DATA
+
+
+
+
 
 
     iterationIndex +=1
@@ -217,9 +238,9 @@ while(iterationIndex < maxIndex):
 
 print("[INFO]: STEP 8 CONVERT INTO JSON")
 
-#WE ARE STORING THE PARENT POOLS INTO A JSON FILE, SO THAT THE USER CAN MODIFY IT
+#WE ARE STORING THE PARENT POOLS INTO A JSON FILE, SO THAT THE USER CAN MODIFY IT WHILE USING FLASK AND CHANGEEXECUTER.PY
 with open('parentPools.json', 'w') as fp:
-    json.dump({"pools":parentPools}, fp)
+    json.dump({"data":parentPools}, fp)
  
 jsonConverter.convertToJSON(parentPools)
 

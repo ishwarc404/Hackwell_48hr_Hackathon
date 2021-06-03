@@ -30,3 +30,17 @@ def getDetailsById(instructionID, data_storage):
 
     return details
 
+
+
+def updateDataStorage(instructionId, final_value, change_requested , data_storage):
+    
+    for each_instruction in data_storage:
+        if (each_instruction.id == instructionId):
+            if(change_requested == "ADD"):
+                each_instruction.value_unit.append(final_value[0:-2]) #-2 strips off \n 
+            if(change_requested == "DELETE"):
+                each_instruction.value_unit.remove(final_value)
+
+
+    print("[INFO]: DATA STORE UPDATED")    
+    return data_storage
