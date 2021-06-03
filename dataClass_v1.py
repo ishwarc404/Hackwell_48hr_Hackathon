@@ -10,9 +10,11 @@ class instructionDetailParsing :
         self.value_required = value_required #True/False
         self.value_unit = value_unit #List of the unti
         self.multivalued = None
+        self.value_type = None
+
         #requires value - true , false
         #type of instruction - boolen, value
-        #type of value - single, multiple, range
+        #type of value - single, multiple, range, checkbox, number, string
 
     
     def refactorData(self):
@@ -86,17 +88,14 @@ class instructionDetailParsing :
                     new_after_map.append(self.unitsMap(each_allowed,configurations.units_map)) #need to map - PCV is measured in %
 
                 self.value_unit = new_after_map
+                self.value_type = "number"
                 
-                # if(self.value_unit != ''):
-                #     print("Value required and it's unit is: {}".format(self.value_unit))
 
-        # print("\n")
 
 
     def printData(self):
-        # print(" Id: {} \n Description: {} \n Units: {} \n x-x-x-x-x \n \n ".format(self.id,self.description,self.value_unit))
-        print("Id: {} \n ".format(self.id))
-
+        print(" Id: {} \n Description: {} \n Units: {} \n x-x-x-x-x \n \n ".format(self.id,self.description,self.value_unit))
+        # print("Id: {} \n ".format(self.id))
 
     #generalised this, as the main function uses this for keyword map
     def unitsMap(self,value_unit,map_dictionary):

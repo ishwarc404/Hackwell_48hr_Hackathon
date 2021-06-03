@@ -24,6 +24,7 @@ def getDetailsById(instructionID, data_storage):
             details['Value Required'] = each_instruction.value_required
             details['Value Unit'] = each_instruction.value_unit
             details['Multivalues'] = each_instruction.multivalued
+            details['Value Type'] = each_instruction.value_type
 
             return details
 

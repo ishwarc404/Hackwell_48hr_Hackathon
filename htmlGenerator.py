@@ -27,7 +27,7 @@ def generateHTML():
     html_data = htmlCodeMapper.init()
     for each in data.keys():
         path = [each]
-        html_data += recursiveParse(data[each],path)
+        html_data += htmlCodeMapper.divWrapperBegin()  +  recursiveParse(data[each],path) +  htmlCodeMapper.divWrapperEnd()
 
     with open('webpage.html', 'w+') as fp:
         fp.write(html_data)

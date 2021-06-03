@@ -80,6 +80,10 @@ for each in data_storage:
             if(word.lower() in configurations.keyword_map.keys()):
                 each.value_required = True
                 each.value_unit.append(each.unitsMap(word.lower(),configurations.keyword_map))
+    
+    for eachType in each.value_unit:
+        if eachType not in configurations.units:
+            each.value_type = "string"
 
 
 print("[INFO]: STEP 6 KEYWORD BASED UNIT EXTRACTION COMPLETED")
