@@ -109,6 +109,25 @@ print("[INFO]: STEP 7 SUBLEVEL EXTRACTION")
 iterationIndex  = 0
 maxIndex = len(instruction_ids)
 
+
+#we need to create a tree with the different parents and levels
+# we need to know the maximum levels possible
+# max_parent_levels_possible = (max_levels - 1 )
+#we need to iterate once through the instruction_ids for that
+max_level  = 0 
+for each in instruction_ids:
+    numberOfLevels = each.count(".")
+    if(numberOfLevels > max_level):
+        max_level = numberOfLevels
+
+parentPoolsRequired = max_level - 1
+
+parentPools = [ {} for i in range(parentPoolsRequired) ] 
+
+
+def findDotIndex(id):
+    return [i for i, ltr in enumerate(id) if ltr == '.']
+
 #first we need to seperate out the parent instruction indices
 parentIndices = []
 while(iterationIndex < maxIndex):
@@ -117,28 +136,54 @@ while(iterationIndex < maxIndex):
     levelNumbers  = current_instruction_id.split(".")
     levelNumbers.remove('')
     #these level numbers are in string format, need to convert into number
-    levelNumbers = [int(i) for i in levelNumbers]
+    # levelNumbers = [int(i) for i in levelNumbers]
+    indexOfDots = findDotIndex(current_instruction_id)
 
     #if parent
     if(numberOfLevels == 1):
-        parentIndices.append(iterationIndex)
+        if(levelNumbers[0] not in parentPools[0].keys()):
+            parentPools[0][levelNumbers[0]] = []
+
+    # #means it is a sublevel
+    if(numberOfLevels > 1):
+        # for eachlevel in numberOfLevels:
+        parentPoolNumber = numberOfLevels - 2
+        indexOfSplitDot = indexOfDots[numberOfLevels - 2]
+        parentPoolKey = current_instruction_id[0:indexOfSplitDot]  #split it uptil the  dot # (numberOfLevels - 1)
+        try:
+            parentPools[parentPoolNumber][parentPoolKey].append([current_instruction_id, commonFunctions.getDescriptionById(current_instruction_id, data_storage)])
+        except:
+            parentPools[parentPoolNumber][parentPoolKey] = []
+
+        
+
 
     iterationIndex +=1
 
+
+# print(parentPools[0])
+# print("\n")
+# print("\n")
+# print(parentPools[1])
+# print("\n")
+# print("\n")
+# print(parentPools[2])
+
+
        
-#Now that we have the parent indices, we need to find how many sub instructions each parent has
-#this logic will leave out the children for the last index,so we will take care of that later after the loop
-#note 1 is being subtracted from the logic , to not include parent in the count
-numberofChildren = []
-for k in range(0, len(parentIndices)-1):
-    numberofChildren.append(parentIndices[k+1]-parentIndices[k])
-    # print("Parent {} has {} children".format(k+1, parentIndices[k+1]-parentIndices[k]-1))
-#last parent is left out
-indexofLastIntruction = len(instruction_ids)
-indexofLastParent = parentIndices[-1]
-numberofChildren.append(indexofLastIntruction - indexofLastParent -1)
-# print("Last children: ", indexofLastIntruction - indexofLastParent-1)
-# print("Number of parent instructions: ")
+# #Now that we have the parent indices, we need to find how many sub instructions each parent has
+# #this logic will leave out the children for the last index,so we will take care of that later after the loop
+# #note 1 is being subtracted from the logic , to not include parent in the count
+# numberofChildren = []
+# for k in range(0, len(parentIndices)-1):
+#     numberofChildren.append(parentIndices[k+1]-parentIndices[k])
+#     # print("Parent {} has {} children".format(k+1, parentIndices[k+1]-parentIndices[k]-1))
+# #last parent is left out
+# indexofLastIntruction = len(instruction_ids)
+# indexofLastParent = parentIndices[-1]
+# numberofChildren.append(indexofLastIntruction - indexofLastParent -1)
+# # print("Last children: ", indexofLastIntruction - indexofLastParent-1)
+# # print("Number of parent instructions: ")
 
 
 
