@@ -18,6 +18,7 @@
  - Step 9: Convert JSON to HTML with reference IDs which will help us map any changes immediately
  - Step 10: Add JSON viewer to HTML
  - Step 11: Added flask application and logic to handle delete/add/edit of instruction values
+ - Step 12: Added flask application and logic to handle delete/add/edit of instruction  types
  - Step Uknown: We need to now include some form of NLP so that we can distinguished some of the instructions
 
 
