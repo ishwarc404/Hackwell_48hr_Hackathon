@@ -12,10 +12,13 @@ def convertToJSON(parentPools):
         # print(parentPools[level].keys())
         keys =  parentPools[level].keys()
         for each_key in keys:
-            current_description = parentPools[level][each_key]["Description"]
+
             all_children = parentPools[level][each_key]["SubModules"]
             parentPools[level][each_key]["SubModules"] = [] #at index 2 
             for each_child in all_children:
+                # print(each_child)
+                # print(parentPools[level+1][each_child])
+                # print("\n \n --")
                 parentPools[level][each_key]["SubModules"].append(parentPools[level+1][each_child])
             if(parentPools[level][each_key]["SubModules"] == []):
                 parentPools[level][each_key]["SubModules"] = None

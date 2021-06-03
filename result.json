@@ -1,891 +1,2135 @@
 {
     "1": {
-        "Description": "PRODUCTION FERMENTATION",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "1.1.",
                 "Description": "Equipment code",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "short_text"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "1.2.",
                 "Description": "Previously used for",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "1.3.",
                 "Description": "Refer equipment log for cleanliness",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "1.4.",
                 "Description": "Cleanliness visually checked by",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "1.5.",
                 "Description": "Area certified",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "1.",
+        "Description": "PRODUCTION FERMENTATION",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "2": {
-        "Description": "CALIBRATION OF pH AND DO2 PROBES :",
         "SubModules": [
             {
+                "SubModules": [
+                    {
+                        "SubModules": null,
+                        "Id": "2.1.1.",
+                        "Description": "Calibrate the pH probe using buffer 7.00",
+                        "Value Required": true,
+                        "Value Unit": [
+                            "pH"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
+                    },
+                    {
+                        "SubModules": null,
+                        "Id": "2.1.2.",
+                        "Description": "Calibrate the pH probe using buffer 4.01",
+                        "Value Required": true,
+                        "Value Unit": [
+                            "pH"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
+                    },
+                    {
+                        "SubModules": null,
+                        "Id": "2.1.3.",
+                        "Description": "Confirm calibration by checking the pH using",
+                        "Value Required": true,
+                        "Value Unit": [
+                            "pH",
+                            "g"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": true
+                    },
+                    {
+                        "SubModules": null,
+                        "Id": "2.1.4.",
+                        "Description": "Calibrate the DO2 probe",
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
+                    }
+                ],
+                "Id": "2.1.",
                 "Description": "CALIBRATION OF 1st pH PROBE AND",
-                "SubModules": [
-                    {
-                        "Description": "Calibrate the pH probe using buffer 7.00",
-                        "SubModules": null
-                    },
-                    {
-                        "Description": "Calibrate the pH probe using buffer 4.01",
-                        "SubModules": null
-                    },
-                    {
-                        "Description": "Confirm calibration by checking the pH using",
-                        "SubModules": null
-                    },
-                    {
-                        "Description": "Calibrate the DO2 probe",
-                        "SubModules": null
-                    }
-                ]
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": [
+                    {
+                        "SubModules": null,
+                        "Id": "2.2.1.",
+                        "Description": "Calibrate the pH probe using buffer 7.00",
+                        "Value Required": true,
+                        "Value Unit": [
+                            "pH"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
+                    },
+                    {
+                        "SubModules": null,
+                        "Id": "2.2.2.",
+                        "Description": "Calibrate the pH probe using buffer 4.01",
+                        "Value Required": true,
+                        "Value Unit": [
+                            "pH"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
+                    },
+                    {
+                        "SubModules": null,
+                        "Id": "2.2.3.",
+                        "Description": "Confirm calibration by checking the pH using",
+                        "Value Required": true,
+                        "Value Unit": [
+                            "pH",
+                            "g"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": true
+                    },
+                    {
+                        "SubModules": null,
+                        "Id": "2.2.4.",
+                        "Description": "Calibrate the DO2 probe",
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
+                    }
+                ],
+                "Id": "2.2.",
                 "Description": "CALIBRATION OF 2nd pH PROBE AND",
-                "SubModules": [
-                    {
-                        "Description": "Calibrate the pH probe using buffer 7.00",
-                        "SubModules": null
-                    },
-                    {
-                        "Description": "Calibrate the pH probe using buffer 4.01",
-                        "SubModules": null
-                    },
-                    {
-                        "Description": "Confirm calibration by checking the pH using",
-                        "SubModules": null
-                    },
-                    {
-                        "Description": "Calibrate the DO2 probe",
-                        "SubModules": null
-                    }
-                ]
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "2.3.",
                 "Description": "Fix the 1st and 2nd pH probes in the designated port",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "2.4.",
                 "Description": "Fix the 1st and 2nd DO2 probes in the designated port",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "2.",
+        "Description": "CALIBRATION OF pH AND DO2 PROBES :",
+        "Value Required": true,
+        "Value Unit": [
+            "pH"
+        ],
+        "Multivalued": null,
+        "Multivalues": false
     },
     "3": {
-        "Description": "LEAKAGE TEST",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "3.1.",
                 "Description": "Replace the rubber septa of the inoculation ports with new ones.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "3.2.",
                 "Description": "Replace the vessel isolation actuated valve on the related RM solution feed",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "3.3.",
                 "Description": "Charge  XX Kg of Potable water into the fermenter: ___________ Kg       A.R.No._________________",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "Kg"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "3.4.",
                 "Description": "Set the Air flow to YY Nm3/hr",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "Nm3/hr"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "3.5.",
                 "Description": "Pressurize the fermenter to ZZ bar.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "3.6.",
                 "Description": "Start the leakage check.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "LEAKAGE CHECK RESULT",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "3.7.51.",
                         "Description": "Exhaust Filter bottom",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.52.",
                         "Description": "Valve before exhaust",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.53.",
                         "Description": "Exhaust bypass valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.54.",
                         "Description": "Exhaust control valve joint",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.55.",
                         "Description": "Test end time and Date",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "hrs",
+                            "dd/mm/yy"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "3.7.",
+                "Description": "LEAKAGE CHECK RESULT",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "LEAKAGE CHECK RESULT",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "3.7.51.",
                         "Description": "Exhaust Filter bottom",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.52.",
                         "Description": "Valve before exhaust",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.53.",
                         "Description": "Exhaust bypass valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.54.",
                         "Description": "Exhaust control valve joint",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.55.",
                         "Description": "Test end time and Date",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "hrs",
+                            "dd/mm/yy"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "3.7.",
+                "Description": "LEAKAGE CHECK RESULT",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "LEAKAGE CHECK RESULT",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "3.7.51.",
                         "Description": "Exhaust Filter bottom",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.52.",
                         "Description": "Valve before exhaust",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.53.",
                         "Description": "Exhaust bypass valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.54.",
                         "Description": "Exhaust control valve joint",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.55.",
                         "Description": "Test end time and Date",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "hrs",
+                            "dd/mm/yy"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "3.7.",
+                "Description": "LEAKAGE CHECK RESULT",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "LEAKAGE CHECK RESULT",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "3.7.51.",
                         "Description": "Exhaust Filter bottom",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.52.",
                         "Description": "Valve before exhaust",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.53.",
                         "Description": "Exhaust bypass valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.54.",
                         "Description": "Exhaust control valve joint",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.55.",
                         "Description": "Test end time and Date",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "hrs",
+                            "dd/mm/yy"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "3.7.",
+                "Description": "LEAKAGE CHECK RESULT",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "LEAKAGE CHECK RESULT",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "3.7.51.",
                         "Description": "Exhaust Filter bottom",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.52.",
                         "Description": "Valve before exhaust",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.53.",
                         "Description": "Exhaust bypass valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.54.",
                         "Description": "Exhaust control valve joint",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.55.",
                         "Description": "Test end time and Date",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "hrs",
+                            "dd/mm/yy"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "3.7.",
+                "Description": "LEAKAGE CHECK RESULT",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "LEAKAGE CHECK RESULT",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "3.7.51.",
                         "Description": "Exhaust Filter bottom",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.52.",
                         "Description": "Valve before exhaust",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.53.",
                         "Description": "Exhaust bypass valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.54.",
                         "Description": "Exhaust control valve joint",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "3.7.55.",
                         "Description": "Test end time and Date",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "hrs",
+                            "dd/mm/yy"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "3.7.",
+                "Description": "LEAKAGE CHECK RESULT",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "3.8.",
                 "Description": "Test result",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "3.9.",
                 "Description": "Details of failure and rectification / NA",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "long_text"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "3.",
+        "Description": "LEAKAGE TEST",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "4": {
-        "Description": "VESSEL PRESSURE TEST -1 (PRESSURE HOLD TEST)",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "4.1.",
                 "Description": "CRITERIA: Pressure drop should not be > 0.2 bar in 10 minutes to pass the test.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar",
+                    "minutes"
+                ],
+                "Multivalued": null,
+                "Multivalues": true
             },
             {
+                "SubModules": null,
+                "Id": "4.2.",
                 "Description": "Test SP 1",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.3.",
                 "Description": "Test Time",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.4.",
                 "Description": "Air flow set Point",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.5.",
                 "Description": "De-pressurise set point",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.6.",
                 "Description": "Test Hysteresis",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.7.",
                 "Description": "Confirm the parameters and start the test.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.8.",
                 "Description": "Test start Time and Date",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs",
+                    "dd/mm/yy"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.9.",
                 "Description": "Test End Time and Date",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs",
+                    "dd/mm/yy"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.11.",
                 "Description": "Test result",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.12.",
                 "Description": "Accept the prompt",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "4.13.",
                 "Description": "Details of failure and rectification / NA",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "long_text"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "4.",
+        "Description": "VESSEL PRESSURE TEST -1 (PRESSURE HOLD TEST)",
+        "Value Required": true,
+        "Value Unit": [
+            "bar"
+        ],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "5": {
-        "Description": "ADDITIONAL SPARGER FINE FILTER",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "5.1.",
                 "Description": "Fix the Air fine filters",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "5.2.",
                 "Description": "Give YY Nm3/hr set point to Air flow control valve of",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "Nm3/hr"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "5.3.",
                 "Description": "Start the filter sterilisation",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "5.4.",
                 "Description": "Pre-sterilisation of the additional sparger fine filter",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "5.5.",
                 "Description": "Sterilise the additional sparger fine filter by passing steam and maintain the steam pressure at 1.1 to 1.3 bar for 30 to 35 minutes.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar",
+                    "minutes"
+                ],
+                "Multivalued": null,
+                "Multivalues": true
             },
             {
-                "Description": "ADDITIONAL SPARGER FINE FILTER STERILISATION CHART / NA",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "5.6.1.",
                         "Description": "Initial",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "5.6.2.",
                         "Description": "After 10 minutes",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "minutes"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
                     },
                     {
+                        "SubModules": null,
+                        "Id": "5.6.3.",
                         "Description": "After 20 minutes",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "minutes"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
                     },
                     {
+                        "SubModules": null,
+                        "Id": "5.6.4.",
                         "Description": "30th  to 35th minute",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "5.6.5.",
                         "Description": "Cool the filter to ambient temperature.",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "5.6.",
+                "Description": "ADDITIONAL SPARGER FINE FILTER STERILISATION CHART / NA",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "5.",
+        "Description": "ADDITIONAL SPARGER FINE FILTER",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "6": {
-        "Description": "MEDIA PREPARATION",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "6.1.",
                 "Description": "Batch size",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "6.2.",
                 "Description": "Receive media solution from A1 Block to the fermenter in A2 Block. Simultaneously switch\u02bbON\u02bc agitator of the fermenter and set the RPM  to YY \u00b1 Y",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "RPM"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
-                "Description": "Total Qty. (XX Kg) of Product media solution",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "6.3.1.",
                         "Description": "A1 Block Media Preparation Batch No.",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "short_text"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "6.3.",
+                "Description": "Total Qty. (XX Kg) of Product media solution",
+                "Value Required": true,
+                "Value Unit": [
+                    "Kg"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             }
-        ]
+        ],
+        "Id": "6.",
+        "Description": "MEDIA PREPARATION",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "7": {
-        "Description": "Vessel pressure test \u2013 2",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "7.1.",
                 "Description": "CRITERIA: Pressure drop should not be > 0.2 bar in",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "7.2.",
                 "Description": "Test Pressure",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.3.",
                 "Description": "Test Time",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.4.",
                 "Description": "Air flow set point",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.5.",
                 "Description": "De-pressurise set point",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.6.",
                 "Description": "Test Hysteresis",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.7.",
                 "Description": "Confirm the parameters and start the test",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.8.",
                 "Description": "Test start time and Date",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs",
+                    "dd/mm/yy"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.9.",
                 "Description": "Test End Time and Date",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs",
+                    "dd/mm/yy"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.11.",
                 "Description": "Test result",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.12.",
                 "Description": "Accept the prompt",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "7.13.",
                 "Description": "Details of failure and rectification / NA",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "long_text"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "7.",
+        "Description": "Vessel pressure test \u2013 2",
+        "Value Required": true,
+        "Value Unit": [
+            "bar"
+        ],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "8": {
-        "Description": "MEDIA STERILISATION AND COOLING",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "8.1.",
                 "Description": "Set the recipe parameters.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.2.",
                 "Description": "Heating 1 SP",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.3.",
                 "Description": "Heating 2 SP",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.4.",
                 "Description": "Sterilisation time",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.5.",
                 "Description": "Sterilisation holding temperature and pressure",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "\u00b0C",
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.6.",
                 "Description": "Heating hysteresis",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.7.",
                 "Description": "Exhaust close temperature",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "\u00b0C"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.8.",
                 "Description": "Back pressure SP",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.9.",
                 "Description": "Air flow SP",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.11.",
                 "Description": "Cooling 1 SP",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.12.",
                 "Description": "Cooling 2 SP",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.13.",
                 "Description": "Filter checked",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.14.",
                 "Description": "Confirm the parameters and start sterilisation.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.15.",
                 "Description": "Media sterilisation start time ____________ hours         8.15.1. Date : ____________",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs",
+                    "dd/mm/yy"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "AIR FINE FILTER STERILISATION",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "8.16.1.",
                         "Description": "Start the filter sterilisation",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.16.2.",
                         "Description": "Pre-sterilisation of the Air fine filter should be done for",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.16.3.",
                         "Description": "Sterilise the Air fine filter by passing steam and maintaining  the steam pressure at 1.1 to 1.3 bar for 30 to 35 minutes",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "bar",
+                            "minutes"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": true
                     },
                     {
-                        "Description": "AIR FINE FILTER STERILISATION CHART",
                         "SubModules": [
                             {
+                                "SubModules": [],
+                                "Id": "8.16.4.1.",
                                 "Description": "Initial",
-                                "SubModules": []
+                                "Value Required": false,
+                                "Value Unit": [],
+                                "Multivalued": null,
+                                "Multivalues": null
                             },
                             {
+                                "SubModules": [],
+                                "Id": "8.16.4.2.",
                                 "Description": "After 10 minutes",
-                                "SubModules": []
+                                "Value Required": true,
+                                "Value Unit": [
+                                    "minutes"
+                                ],
+                                "Multivalued": null,
+                                "Multivalues": false
                             },
                             {
+                                "SubModules": [],
+                                "Id": "8.16.4.3.",
                                 "Description": "After 20 minutes",
-                                "SubModules": []
+                                "Value Required": true,
+                                "Value Unit": [
+                                    "minutes"
+                                ],
+                                "Multivalued": null,
+                                "Multivalues": false
                             },
                             {
+                                "SubModules": [],
+                                "Id": "8.16.4.4.",
                                 "Description": "30th to 35th minute",
-                                "SubModules": []
+                                "Value Required": false,
+                                "Value Unit": [],
+                                "Multivalued": null,
+                                "Multivalues": null
                             }
-                        ]
+                        ],
+                        "Id": "8.16.4.",
+                        "Description": "AIR FINE FILTER STERILISATION CHART",
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.16.5.",
                         "Description": "Accept the prompt for completion of sterilisation",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.16.6.",
                         "Description": "Cool the filter to ambient temperature",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "\u00b0C"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.16.7.",
                         "Description": "Accept the prompt for completion of cooling",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "g"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
                     }
-                ]
+                ],
+                "Id": "8.16.",
+                "Description": "AIR FINE FILTER STERILISATION",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.17.",
                 "Description": "Open the vessel isolation valves on G Header line, Edenor feed line and L-Leucine feed line once the",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.18.",
                 "Description": "Heating 1 SP (H1 \u2013 H1 \u00b0C)",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "\u00b0C"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.19.",
                 "Description": "Heating 2 SP (H2\u00b11 \u00b0C)",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "\u00b0C"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.21.",
                 "Description": "Sterilisation",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "8.22.25.",
                         "Description": "Transfer line from 100L Fermenter.",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.11.",
                         "Description": "Exhaust bypass line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.26.",
                         "Description": "Spare nozzle 4 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.12.",
                         "Description": "Sampling valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.27.",
                         "Description": "Spare nozzle 5 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.13.",
                         "Description": "Harvest valve steam cross outlet line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.28.",
                         "Description": "Spare nozzle 6 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.14.",
                         "Description": "Man hole lid",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.29.",
                         "Description": "Additional sparger line/ NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.15.",
                         "Description": "Sampling dip rod line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "8.22.",
+                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "8.22.25.",
                         "Description": "Transfer line from 100L Fermenter.",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.11.",
                         "Description": "Exhaust bypass line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.26.",
                         "Description": "Spare nozzle 4 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.12.",
                         "Description": "Sampling valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.27.",
                         "Description": "Spare nozzle 5 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.13.",
                         "Description": "Harvest valve steam cross outlet line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.28.",
                         "Description": "Spare nozzle 6 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.14.",
                         "Description": "Man hole lid",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.29.",
                         "Description": "Additional sparger line/ NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.15.",
                         "Description": "Sampling dip rod line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "8.22.",
+                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
-                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "8.22.25.",
                         "Description": "Transfer line from 100L Fermenter.",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.11.",
                         "Description": "Exhaust bypass line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.26.",
                         "Description": "Spare nozzle 4 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.12.",
                         "Description": "Sampling valve",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.27.",
                         "Description": "Spare nozzle 5 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.13.",
                         "Description": "Harvest valve steam cross outlet line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.28.",
                         "Description": "Spare nozzle 6 / NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.14.",
                         "Description": "Man hole lid",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.29.",
                         "Description": "Additional sparger line/ NA",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     },
                     {
+                        "SubModules": null,
+                        "Id": "8.22.15.",
                         "Description": "Sampling dip rod line",
-                        "SubModules": null
+                        "Value Required": false,
+                        "Value Unit": [],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "8.22.",
+                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.23.",
                 "Description": "Close the vessel isolation valves on G Header line, RM and RM feed line.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.24.",
                 "Description": "Start cooling.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.25.",
                 "Description": "Air flow through additional",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.26.",
                 "Description": "Back pressure SP (ZZ-ZZ bar)",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.27.",
                 "Description": "Air flow SP (YY\u00b1YY Nm3/ hr)",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "Nm3/ hr"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.28.",
                 "Description": "Air pressure set point",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.29.",
                 "Description": "Cooling 1 SP (C1 \u2013 C1 \u00b0C)",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "\u00b0C"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.31.",
                 "Description": "Start nutrient dosing and accept the prompt.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.32.",
                 "Description": "Set back pressure to 1.1 \u00b1 0.2 bar..",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.33.",
                 "Description": "Line up sterilised Antifoam SAG 471 solution.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.34.",
                 "Description": "Close the Air bypass line.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "8.35.",
                 "Description": "Sparge Air through the media for 10 \u00b1 2 minutes",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "minutes"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.36.",
                 "Description": "Check the pH of the media.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.37.",
                 "Description": "pH of the media has to be adjusted to pH1 \u00b1 pH1",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "8.38.",
                 "Description": "pH of the media after adjustment.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
-                "Description": "Qty of  10% Base solution (w/w) /",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "8.39.1.",
                         "Description": "Solution preparation No.",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "short_text"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": null
                     }
-                ]
+                ],
+                "Id": "8.39.",
+                "Description": "Qty of  10% Base solution (w/w) /",
+                "Value Required": true,
+                "Value Unit": [
+                    "%"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             }
-        ]
+        ],
+        "Id": "8.",
+        "Description": "MEDIA STERILISATION AND COOLING",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "9": {
-        "Description": "INITIAL PARAMETERS SETTING",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "9.1.",
                 "Description": "Set Back pressure to ZZ bar",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "bar"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "9.2.",
                 "Description": "Set Air flow to YY Nm3/ hr",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "Nm3/ hr"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "9.3.",
                 "Description": "Set Temperature to T1 \u00b0C",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "\u00b0C"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "9.4.",
                 "Description": "Set Agitator speed to A1 RPM",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "RPM"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "9.5.",
                 "Description": "Calibrate the 1st DO2 to 100%.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "%"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "9.6.",
                 "Description": "Calibrate the 2nd DO2 to 100%.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "%"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             }
-        ]
+        ],
+        "Id": "9.",
+        "Description": "INITIAL PARAMETERS SETTING",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "11": {
-        "Description": "INOCULATION",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "11.1.",
                 "Description": "Set and confirm the recipe parameters.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "11.2.",
                 "Description": "Seed fermenter code.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "11.3.",
                 "Description": "pH of the inoculum.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "11.4.",
                 "Description": "PCV of the inoculum.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "%"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             },
             {
+                "SubModules": null,
+                "Id": "11.5.",
                 "Description": "Age of the inoculum.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "hrs"
+                ],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "11.6.",
                 "Description": "Inoculate the fermenter.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "11.7.",
                 "Description": "Start production.",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "11.8.",
                 "Description": "Take post inoculation sample (POIS).",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             },
             {
+                "SubModules": null,
+                "Id": "11.9.",
                 "Description": "Check the pH of the post inoculation sample.",
-                "SubModules": null
+                "Value Required": true,
+                "Value Unit": [
+                    "pH"
+                ],
+                "Multivalued": null,
+                "Multivalues": false
             }
-        ]
+        ],
+        "Id": "11.",
+        "Description": "INOCULATION",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "12": {
+        "SubModules": null,
+        "Id": "12.",
         "Description": "MONITORING THE FERMENTER",
-        "SubModules": null
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "13": {
-        "Description": "UNKNOWN INSTRUCTION ",
-        "SubModules": null
+        "SubModules": null,
+        "Id": null,
+        "Description": null,
+        "Value Required": null,
+        "Value Unit": null,
+        "Multivalued": null
     },
     "16": {
-        "Description": "HARVESTING CRITERIA",
         "SubModules": [
             {
-                "Description": "INSTRUCTION BY THE MANAGER / PRODUCTION INCHARGE",
                 "SubModules": [
                     {
+                        "SubModules": null,
+                        "Id": "16.3.1.",
                         "Description": "Stop feeding at: ___________ Log hr     16.3.2. Signature: __________________    17.3.3. Date: ________________",
-                        "SubModules": null
+                        "Value Required": true,
+                        "Value Unit": [
+                            "Log hr"
+                        ],
+                        "Multivalued": null,
+                        "Multivalues": false
                     }
-                ]
+                ],
+                "Id": "16.3.",
+                "Description": "INSTRUCTION BY THE MANAGER / PRODUCTION INCHARGE",
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "16.",
+        "Description": "HARVESTING CRITERIA",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "17": {
-        "Description": "SAMPLES FOR MICROBIOLOGICAL ANALYSIS:",
         "SubModules": [
             {
+                "SubModules": null,
+                "Id": "17.1.",
                 "Description": "In addition to the PIS and POIS samples, take sterile sample from 100kL fermenter every day starting from the 1st day",
-                "SubModules": null
+                "Value Required": false,
+                "Value Unit": [],
+                "Multivalued": null,
+                "Multivalues": null
             }
-        ]
+        ],
+        "Id": "17.",
+        "Description": "SAMPLES FOR MICROBIOLOGICAL ANALYSIS:",
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "18": {
+        "SubModules": null,
+        "Id": "18.",
         "Description": "SAMPLES TO CHECK PRODUCT CONTENT (Pr.Cont.):",
-        "SubModules": null
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     },
     "19": {
+        "SubModules": null,
+        "Id": "19.",
         "Description": "CHECKING pH AND PCV OF THE BROTH",
-        "SubModules": null
+        "Value Required": true,
+        "Value Unit": [
+            "pH",
+            "%"
+        ],
+        "Multivalued": null,
+        "Multivalues": true
     },
     "21": {
+        "SubModules": null,
+        "Id": "21.",
         "Description": "DEVIATION DETAILS:",
-        "SubModules": null
+        "Value Required": false,
+        "Value Unit": [],
+        "Multivalued": null,
+        "Multivalues": null
     }
 }

@@ -4,8 +4,8 @@ import configurations
 import itertools
 
 class instructionDetailParsing :
-    def __init__(self, id, description, value_required, value_unit):
-        self.id = id
+    def __init__(self, instruction_number, description, value_required, value_unit):
+        self.id = instruction_number
         self.description = description
         self.value_required = value_required #True/False
         self.value_unit = value_unit #List of the unti
@@ -94,7 +94,8 @@ class instructionDetailParsing :
 
 
     def printData(self):
-        print(" Id: {} \n Description: {} \n Units: {} \n x-x-x-x-x \n \n ".format(self.id,self.description,self.value_unit))
+        # print(" Id: {} \n Description: {} \n Units: {} \n x-x-x-x-x \n \n ".format(self.id,self.description,self.value_unit))
+        print("Id: {} \n ".format(self.id))
 
 
     #generalised this, as the main function uses this for keyword map

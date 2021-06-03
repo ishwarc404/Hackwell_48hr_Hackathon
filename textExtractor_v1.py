@@ -100,8 +100,9 @@ print("Total instructions needing values: ",count_value_found)
 print('x-x-x-x-x \n')
 
 
+
 # for each in data_storage:
-#     print(each.printData())
+#     each.printData()
 
 
 print("[INFO]: STEP 7 SUBLEVEL EXTRACTION")
@@ -145,7 +146,8 @@ while(iterationIndex < maxIndex):
     #if parent
     if(numberOfLevels == 1):
         if(levelNumbers[0] not in parentPools[0].keys()):
-            parentPools[0][levelNumbers[0]] = {"Description": commonFunctions.getDescriptionById(current_instruction_id, data_storage),"SubModules":[]}
+            parentPools[0][levelNumbers[0]] = {"SubModules":[]}
+            parentPools[0][levelNumbers[0]].update(commonFunctions.getDetailsById(current_instruction_id, data_storage))
 
     # #means it is a sublevel
     if(numberOfLevels > 1):
@@ -159,9 +161,11 @@ while(iterationIndex < maxIndex):
         try:
             parentPools[parentPoolNumber][parentPoolKey]["SubModules"].append(current_instruction_id[0:-1])
         except:
-            parentPools[parentPoolNumber][parentPoolKey] = {"Description": "UNKNOWN INSTRUCTION ","SubModules":[]}
+            parentPools[parentPoolNumber][parentPoolKey] = {"SubModules":[]}
+            parentPools[parentPoolNumber][parentPoolKey].update(commonFunctions.getDetailsById("Unknown", data_storage))
 
-        parentPools[childPoolNumber][current_instruction_id[0:-1]] = {"Description": commonFunctions.getDescriptionById(current_instruction_id, data_storage),"SubModules":[]}
+        parentPools[childPoolNumber][current_instruction_id[0:-1]] = {"SubModules":[]}
+        parentPools[childPoolNumber][current_instruction_id[0:-1]].update(commonFunctions.getDetailsById(current_instruction_id, data_storage))
 
 
 
