@@ -16,7 +16,7 @@
  - Step 7: Clean up the index numbering and identify sublevels
  - Step 8: Convert to JSON
  - Step 9: Convert JSON to HTML with reference IDs which will help us map any changes immediately
-
+ - Step 10: Add JSON viewer to HTML
  - Step Uknown: We need to now include some form of NLP so that we can distinguished some of the instructions
 
 

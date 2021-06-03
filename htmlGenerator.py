@@ -20,6 +20,9 @@ def recursiveParse(data, path):
 
 
 def generateHTML():
+
+    header = "<div  style='margin-bottom:10px; margin-top: 10px;' class='d-flex justify-content-center'><h1>Results</h1></div>"
+    outerWrapper = "<div  class='d-flex inline'><div>"
     with open('result.json') as f:
         data = json.load(f)
     
@@ -29,8 +32,11 @@ def generateHTML():
         path = [each]
         html_data += htmlCodeMapper.divWrapperBegin()  +  recursiveParse(data[each],path) +  htmlCodeMapper.divWrapperEnd()
 
+
+    outerWrapperEnd = " </div><div><iframe  src='./jsonViewer.html' width='1000' height='6000' frameborder='0'></div></div> </div>"
+
     with open('webpage.html', 'w+') as fp:
-        fp.write(html_data)
+        fp.write(header + outerWrapper + html_data + outerWrapperEnd)
 
 
 

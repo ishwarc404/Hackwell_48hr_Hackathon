@@ -1,8 +1,8 @@
 def init():
-    return "<html><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'><form>"
+    return "<html><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>"
 
 def finalise():
-    return "</form></html>"
+    return "</html>"
 
 def divWrapperBegin():
     return "<div style='border: solid 1px black; margin:10 10 10 10px; padding: 10 10 10 10px; width:50vw;''>"
