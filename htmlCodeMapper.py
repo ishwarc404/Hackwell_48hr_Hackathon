@@ -1,5 +1,5 @@
 def init():
-    return "<html><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>"
+    return "<html><script>;function addValue(t){var a=prompt('Please enter a new value which you want to include:'),n={path:t,value:a};var e=new XMLHttpRequest();e.open('POST','http://127.0.0.1:5000/addData',true);e.setRequestHeader('Content-type','application/json');e.send(JSON.stringify(n))};</script><link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>"
 
 def finalise():
     return "</html>"
@@ -27,6 +27,6 @@ def createInput(submodule, path):
         field += "</select>"
 
         #adding the add field button
-        field += "<button id='{}' style='margin-left:10px' class='btn btn-primary'>+</button>".format(value_reference_path)
+    field += "<button id='{}' style='margin-left:10px' class='btn btn-primary' onclick=addValue(this.id)>+</button>".format(value_reference_path)
     outerdiv_end = "</div>"
     return outerdiv_start + label + field + outerdiv_end

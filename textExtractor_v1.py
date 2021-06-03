@@ -1,6 +1,7 @@
 
 import docxpy
 import re
+import json
 
 #model class
 from dataClass_v1 import instructionDetailParsing
@@ -212,7 +213,13 @@ while(iterationIndex < maxIndex):
 
 
 
+
+
 print("[INFO]: STEP 8 CONVERT INTO JSON")
+
+#WE ARE STORING THE PARENT POOLS INTO A JSON FILE, SO THAT THE USER CAN MODIFY IT
+with open('parentPools.json', 'w') as fp:
+    json.dump({"pools":parentPools}, fp)
  
 jsonConverter.convertToJSON(parentPools)
 

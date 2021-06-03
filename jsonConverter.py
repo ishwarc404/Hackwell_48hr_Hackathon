@@ -1,4 +1,5 @@
 import json
+import requests
 
 def convertToJSON(parentPools):
     numberOfLevels = len(parentPools)
@@ -28,3 +29,7 @@ def convertToJSON(parentPools):
 
     with open('result.json', 'w') as fp:
         json.dump(parentPools[0], fp)
+
+    
+    # we need to post this JSON onto the API server as well
+    requests.post("https://json.extendsclass.com/bin/c7bb0eede540", parentPools[0])
