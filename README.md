@@ -13,7 +13,8 @@
  - Step 4: Add a unit mapper in case the representation is different (pcv -> %)
  - Step 5: Provide user with multiple options to select unit where the algorithm is not so sure
  - Step 6: Add a keyword map, and try to figure out the units requirement of the ones which which could not be identifies
- - Step 7: We need to now include some form of NLP so that we can distinguished some of the instructions
+ -Step 7: Clean up the index numbering and identify sublevels
+ - Step Uknown: We need to now include some form of NLP so that we can distinguished some of the instructions
 
 
 ### To do

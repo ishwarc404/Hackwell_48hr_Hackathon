@@ -8,12 +8,13 @@ units_regex = re.compile('Kg|^N|m3|mm$|Nm3|\/[ ]*hr|Log hr|hr$|mg$|g$|minutes|pH
 units_map  = { 'PCV' : '%' }
 
 keyword_map = { 'date': 'dd/mm/yy',
-                'signature':'signature',
+                'signature':'short_text',
                 'age':'hrs',
                 'temperature':'°C',
                 'time':'hrs',
                 'quantity':'Kgs',
-                'code':'code',
-                'no.': 'number',
-                'pressure':'bar'
+                'code':'short_text',
+                'no.': 'short_text',
+                'pressure':'bar',
+                'details':'long_text'
                 }
