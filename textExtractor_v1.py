@@ -15,6 +15,8 @@ import commonFunctions
 import changeExecuter
 
 
+import os
+
 file = 'data_manual_clean.docx'
 file = 'original_data.docx'
 
@@ -243,16 +245,19 @@ while(iterationIndex < maxIndex):
 
 print("[INFO]: STEP 8 CONVERT INTO JSON")
 
-# #WE ARE STORING THE PARENT POOLS INTO A JSON FILE, SO THAT THE USER CAN MODIFY IT WHILE USING FLASK AND CHANGEEXECUTER.PY
-# with open('parentPools.json', 'w') as fp:
-#     json.dump({"data":parentPools}, fp)
- 
 jsonConverter.convertToJSON(parentPools)
 
 
 print("[INFO]: STEP 8 CONVERT INTO JSON COMPLETED")
 
 
+print("[INFO]: STEP 9 CONVERT INTO HTML")
+
+os.system('python3 htmlGenerator.py')
+os.system('open webpage.html')
+
+
+print("[INFO]: STEP 9 CONVERT INTO HTML COMPLETED")
 
 
        

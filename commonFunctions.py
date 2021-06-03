@@ -39,7 +39,9 @@ def updateDataStorage(instructionId, final_value, change_requested , data_storag
             if(change_requested == "ADD"):
                 each_instruction.value_unit.append(final_value[0:-2]) #-2 strips off \n 
             if(change_requested == "DELETE"):
-                each_instruction.value_unit.remove(final_value)
+                each_instruction.value_unit.remove(final_value[0:-2])
+            if(change_requested == "EDIT_INSTRUCTION"):
+                each_instruction.description = final_value[0:-2]
 
 
     print("[INFO]: DATA STORE UPDATED")    
