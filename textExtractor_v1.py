@@ -25,7 +25,7 @@ text = text.split("\n")
 instructions_number_regex = re.compile('^([1-9]+[1-9]*[.])+')
 instructions_description_regex = re.compile('^([1-9]+[1-9]*[.])+([ ]*[A-Z|a-z]*|[ ]*)+')
 
-# text = ['8.39.1. Solution preparation No.']
+# text = ['8.22.11. Exhaust bypass line ']
 data_storage = []
 print("[INFO]: STEP 1-5 STARTING")
 
@@ -101,6 +101,10 @@ print("Total instructions needing values: ",count_value_found)
 print('x-x-x-x-x \n')
 
 
+# for each in data_storage:
+#     print(each.printData())
+
+
 print("[INFO]: STEP 7 SUBLEVEL EXTRACTION")
 #we need to parse instruction_ids and get the data
 #Ananlsyis stage
@@ -120,7 +124,7 @@ for each in instruction_ids:
     if(numberOfLevels > max_level):
         max_level = numberOfLevels
 
-parentPoolsRequired = max_level - 1
+parentPoolsRequired = max_level
 
 parentPools = [ {} for i in range(parentPoolsRequired) ] 
 
@@ -131,6 +135,9 @@ def findDotIndex(id):
 #first we need to seperate out the parent instruction indices
 parentIndices = []
 while(iterationIndex < maxIndex):
+    # print(parentPools[0])
+    # print(parentPools[1])
+    # print("-------")
     current_instruction_id = instruction_ids[iterationIndex]
     numberOfLevels = current_instruction_id.count(".")
     levelNumbers  = current_instruction_id.split(".")
@@ -142,33 +149,62 @@ while(iterationIndex < maxIndex):
     #if parent
     if(numberOfLevels == 1):
         if(levelNumbers[0] not in parentPools[0].keys()):
-            parentPools[0][levelNumbers[0]] = []
+            parentPools[0][levelNumbers[0]] = [commonFunctions.getDescriptionById(current_instruction_id, data_storage),[]]
 
     # #means it is a sublevel
     if(numberOfLevels > 1):
         # for eachlevel in numberOfLevels:
+        
         parentPoolNumber = numberOfLevels - 2
         indexOfSplitDot = indexOfDots[numberOfLevels - 2]
         parentPoolKey = current_instruction_id[0:indexOfSplitDot]  #split it uptil the  dot # (numberOfLevels - 1)
-        try:
-            parentPools[parentPoolNumber][parentPoolKey].append([current_instruction_id, commonFunctions.getDescriptionById(current_instruction_id, data_storage)])
-        except:
-            parentPools[parentPoolNumber][parentPoolKey] = []
+        childPoolNumber = parentPoolNumber + 1
 
-        
+
+        print("Current id:",current_instruction_id)
+        print("Parent pool key:",parentPoolKey)
+        print("Parent pool number:",parentPoolNumber)
+        print(parentPools[parentPoolNumber])
+        print("--- \n")
+        # print("Ch id:",current_instruction_id)
+        # print("Current id:",current_instruction_id)
+
+        try:
+            parentPools[parentPoolNumber][parentPoolKey][1].append(current_instruction_id[0:-1])
+        except:
+            parentPools[parentPoolNumber][parentPoolKey] = ["UNKNOWN INSTRUCTION",[]]
+        #     parentPools[parentPoolNumber][parentPoolKey][1].append(current_instruction_id[0:-1])
+
+
+        parentPools[childPoolNumber][current_instruction_id[0:-1]] = [commonFunctions.getDescriptionById(current_instruction_id, data_storage),[]]
+
 
 
     iterationIndex +=1
 
+print("LEVEL 0")
+for i in parentPools[0].keys():
+    if(len(parentPools[0][i])>0):
+        print("{}  = {} ".format(i,parentPools[0][i]))
 
-# print(parentPools[0])
-# print("\n")
-# print("\n")
-# print(parentPools[1])
-# print("\n")
-# print("\n")
-# print(parentPools[2])
+print("\n \n")
+print("LEVEL 1")
+for i in parentPools[1].keys():
+    if(len(parentPools[1][i])>0):
+        print("{}  = {} ".format(i,parentPools[1][i]))
 
+
+print("\n \n")
+print("LEVEL 2")
+for i in parentPools[2].keys():
+    if(len(parentPools[2][i])>0):
+        print("{}  = {} ".format(i,parentPools[2][i]))
+
+print("\n \n")
+print("LEVEL 3")
+for i in parentPools[3].keys():
+    if(len(parentPools[3][i])>0):
+        print("{}  = {} ".format(i,parentPools[3][i]))
 
        
 # #Now that we have the parent indices, we need to find how many sub instructions each parent has
@@ -228,3 +264,4 @@ while(iterationIndex < maxIndex):
     
 #     print('Starting: {}'.format(text[procedure_indices[i+1]].strip()))
 #     print("########################")
+
