@@ -17,8 +17,8 @@ text = docxpy.process(file)
 
 text = text.split("\n")
 
-instructions_number_regex = re.compile('^\d\d?[.]+(\d?\d?.?)?')
-instructions_description_regex = re.compile('^\d\d?[.]+\d?\d?.?([ ]*[A-Z|a-z]*|[ ]*)+')
+instructions_number_regex = re.compile('^([1-9]+[1-9]*[.])+')
+instructions_description_regex = re.compile('^([1-9]+[1-9]*[.])+([ ]*[A-Z|a-z]*|[ ]*)+')
 
 # text = ['8.39.1. Solution preparation No.']
 data_storage = []
