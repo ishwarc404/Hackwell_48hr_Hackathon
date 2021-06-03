@@ -12,5 +12,8 @@ keyword_map = { 'date': 'dd/mm/yy',
                 'age':'hrs',
                 'temperature':'°C',
                 'time':'hrs',
-                'quantity':'Kgs'
+                'quantity':'Kgs',
+                'code':'code',
+                'no.': 'number',
+                'pressure':'bar'
                 }
