@@ -26,5 +26,5 @@ def convertToJSON(parentPools):
         # print(parentPools[level])
         level-=1
 
-    with open('result.json', 'w+') as fp:
+    with open('result.json', 'w') as fp:
         json.dump(parentPools[0], fp)

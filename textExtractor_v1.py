@@ -132,41 +132,51 @@ parentPools = [ {} for i in range(parentPoolsRequired) ]
 def findDotIndex(id):
     return [i for i, ltr in enumerate(id) if ltr == '.']
 
+
+
+#TO PREVENT DUPLICATION OF DATA
+VISITED_IDS = []
+
+
 #first we need to seperate out the parent instruction indices
 parentIndices = []
 while(iterationIndex < maxIndex):
 
-    current_instruction_id = instruction_ids[iterationIndex]
-    numberOfLevels = current_instruction_id.count(".")
-    levelNumbers  = current_instruction_id.split(".")
-    levelNumbers.remove('')
-    #these level numbers are in string format, need to convert into number
-    indexOfDots = findDotIndex(current_instruction_id)
-
-    #if parent
-    if(numberOfLevels == 1):
-        if(levelNumbers[0] not in parentPools[0].keys()):
-            parentPools[0][levelNumbers[0]] = {"SubModules":[]}
-            parentPools[0][levelNumbers[0]].update(commonFunctions.getDetailsById(current_instruction_id, data_storage))
-
-    # #means it is a sublevel
-    if(numberOfLevels > 1):
-        # for eachlevel in numberOfLevels:
+    if(instruction_ids[iterationIndex] not in VISITED_IDS):
         
-        parentPoolNumber = numberOfLevels - 2
-        indexOfSplitDot = indexOfDots[numberOfLevels - 2]
-        parentPoolKey = current_instruction_id[0:indexOfSplitDot]  #split it uptil the  dot # (numberOfLevels - 1)
-        childPoolNumber = parentPoolNumber + 1
+        current_instruction_id = instruction_ids[iterationIndex]
+        numberOfLevels = current_instruction_id.count(".")
+        levelNumbers  = current_instruction_id.split(".")
+        levelNumbers.remove('')
+        #these level numbers are in string format, need to convert into number
+        indexOfDots = findDotIndex(current_instruction_id)
 
-        try:
-            parentPools[parentPoolNumber][parentPoolKey]["SubModules"].append(current_instruction_id[0:-1])
-        except:
-            parentPools[parentPoolNumber][parentPoolKey] = {"SubModules":[]}
-            parentPools[parentPoolNumber][parentPoolKey].update(commonFunctions.getDetailsById("Unknown", data_storage))
+        #if parent
+        if(numberOfLevels == 1):
+            if(levelNumbers[0] not in parentPools[0].keys()):
+                parentPools[0][levelNumbers[0]] = {"SubModules":[]}
+                parentPools[0][levelNumbers[0]].update(commonFunctions.getDetailsById(current_instruction_id, data_storage))
 
-        parentPools[childPoolNumber][current_instruction_id[0:-1]] = {"SubModules":[]}
-        parentPools[childPoolNumber][current_instruction_id[0:-1]].update(commonFunctions.getDetailsById(current_instruction_id, data_storage))
+        # #means it is a sublevel
+        if(numberOfLevels > 1):
+            # for eachlevel in numberOfLevels:
+            
+            parentPoolNumber = numberOfLevels - 2
+            indexOfSplitDot = indexOfDots[numberOfLevels - 2]
+            parentPoolKey = current_instruction_id[0:indexOfSplitDot]  #split it uptil the  dot # (numberOfLevels - 1)
+            childPoolNumber = parentPoolNumber + 1
 
+            try:
+                parentPools[parentPoolNumber][parentPoolKey]["SubModules"].append(current_instruction_id[0:-1])
+            except:
+                pass
+                # parentPools[parentPoolNumber][parentPoolKey] = {"SubModules":[]}
+                # parentPools[parentPoolNumber][parentPoolKey].update(commonFunctions.getDetailsById("Unknown", data_storage))
+
+            parentPools[childPoolNumber][current_instruction_id[0:-1]] = {"SubModules":[]}
+            parentPools[childPoolNumber][current_instruction_id[0:-1]].update(commonFunctions.getDetailsById(current_instruction_id, data_storage))
+
+            VISITED_IDS.append(current_instruction_id)  #TO PREVENT DUPLICATION OF DATA
 
 
     iterationIndex +=1
@@ -204,14 +214,6 @@ jsonConverter.convertToJSON(parentPools)
 
 
 print("[INFO]: STEP 8 CONVERT INTO JSON COMPLETED")
-
-
-
-
-
-
-
-
 
 
 
