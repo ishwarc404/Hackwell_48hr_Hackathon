@@ -17,10 +17,13 @@ text = docxpy.process(file)
 
 text = text.split("\n")
 
-instructions_number_regex = re.compile('^\d\d?[.]+\d?.?')
-instructions_description_regex = re.compile('^\d\d?[.]+\d?.?([ ]*[A-Z|a-z]*|[ ]*)+')
+instructions_number_regex = re.compile('^\d\d?[.]+(\d?\d?.?)?')
+instructions_description_regex = re.compile('^\d\d?[.]+\d?\d?.?([ ]*[A-Z|a-z]*|[ ]*)+')
 
-text = ['19. CHECKING pH AND PCV OF THE BROTH',' 16.3.1. Stop feegggmgding at: ___________ Log hr     16.3.2. Signature: __________________    17.3.3. Date: ________________', '1.2 Configurhrsdw']
+# text = ['19. CHECKING pH AND PCV OF THE BROTH',' 16.3.1. Stop feegggmgding at: ___________ Log hr     16.3.2. Signature: __________________    17.3.3. Date: ________________', '1.2 Configurhrsdw']
+data_storage = []
+print("[INFO]: STEP 1-5 STARTING")
+
 
 procedure_indices = []
 for currentIndex in range(0,len(text)):
@@ -45,9 +48,38 @@ for currentIndex in range(0,len(text)):
         
         #refactorData basically cleans it a little more
         data.refactorData()
+        data_storage.append(data)
         procedure_indices.append(currentIndex)
     
-print("xxx-xxx-xxx-xxx-xxx-xxx-xxx-xxx")
+print("[INFO]: STEP 1-5 REGEX MAPPING AND EXTRACTION COMPLETED")
+
+#Analysis
+count_value_found = 0
+for each in data_storage:
+    if(each.value_required):
+        count_value_found+=1
+print("Total instructions extracted: ",len(data_storage))
+print("Total instructions needing values: ",count_value_found)
+print('x-x-x-x-x \n')
+
+print("[INFO]: STEP 5 STARTING")
+for each in data_storage:
+    if(not each.value_required): #working on only the ones which do not have any value required
+        for word in each.description.split(" "):
+            if(word.lower() in configurations.keyword_map.keys()):
+                each.value_required = True
+                each.value_unit.append(each.unitsMap(word.lower(),configurations.keyword_map))
+
+
+print("[INFO]: STEP 5 KEYWORD BASED UNIT EXTRACTION COMPLETED")
+#Analysis
+count_value_found = 0
+for each in data_storage:
+    if(each.value_required):
+        count_value_found+=1
+print("Total instructions extracted: ",len(data_storage))
+print("Total instructions needing values: ",count_value_found)
+print('x-x-x-x-x \n')
 
 #lets try to print related data now
 

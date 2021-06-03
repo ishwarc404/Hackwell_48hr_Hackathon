@@ -1,3 +1,4 @@
+from enum import Flag
 from posixpath import join
 import configurations
 import itertools
@@ -8,13 +9,14 @@ class instructionDetails :
         self.description = description
         self.value_required = value_required #True/False
         self.value_unit = value_unit #List of the unti
+        self.multivalued = None
         #requires value - true , false
         #type of instruction - boolen, value
         #type of value - single, multiple, range
 
     
     def refactorData(self):
-        print("Id: {} Description: {}".format(self.id,self.description))
+        # print("Id: {} Description: {}".format(self.id,self.description))
 
         if(self.value_required):
             
@@ -39,13 +41,12 @@ class instructionDetails :
                     unit_allowed = False
                 else:
                     unit_allowed = True
+                    self.multivalued  = False #just a single unit found for it
 
                 
                 #converting joint_unit into a list
                 joint_unit = [joint_unit]
 
-
-           
 
             #if the first check fails
             if(unit_allowed == False):
@@ -68,9 +69,11 @@ class instructionDetails :
                     unit_allowed = True
                     #joint unit is nothing but a list now
                     joint_unit = possible_allowed
+                    self.multivalued = True #multiple units were found which do not work together. 
 
                 else:
                     unit_allowed = False
+                    self.value_required = False
 
 
             #we accept it only if it is allowed, else we keep 
@@ -80,20 +83,24 @@ class instructionDetails :
                 
                 new_after_map = []
                 for each_allowed in self.value_unit:
-                    new_after_map.append(each_allowed) #need to map - PCV is measured in %
+                    new_after_map.append(self.unitsMap(each_allowed,configurations.units_map)) #need to map - PCV is measured in %
 
                 self.value_unit = new_after_map
                 
-                if(self.value_unit != ''):
-                    print("Value required and it's unit is: {}".format(self.value_unit))
+                # if(self.value_unit != ''):
+                #     print("Value required and it's unit is: {}".format(self.value_unit))
 
-        print("\n")
+        # print("\n")
 
 
+    def printData(self):
+        print(" Id: {} \n Description: {} \n Units: {} \n x-x-x-x-x \n \n ".format(self.id,self.description,self.value_unit))
 
-    def unitsMap(self,value_unit):
-        if(value_unit in configurations.units_map.keys()):
-            return configurations.units_map[value_unit]
+
+    #generalised this, as the main function uses this for keyword map
+    def unitsMap(self,value_unit,map_dictionary):
+        if(value_unit in map_dictionary.keys()):
+            return map_dictionary[value_unit]
         else:
             return value_unit
 
