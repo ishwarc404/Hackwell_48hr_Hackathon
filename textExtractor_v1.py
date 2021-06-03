@@ -254,7 +254,7 @@ print("[INFO]: STEP 8 CONVERT INTO JSON COMPLETED")
 print("[INFO]: STEP 9 CONVERT INTO HTML")
 
 os.system('python3 htmlGenerator.py')
-os.system('open webpage.html')
+os.system('open webpage.htmlp')
 
 
 print("[INFO]: STEP 9 CONVERT INTO HTML COMPLETED")
