@@ -1,0 +1,891 @@
+{
+    "1": {
+        "Description": "PRODUCTION FERMENTATION",
+        "SubModules": [
+            {
+                "Description": "Equipment code",
+                "SubModules": null
+            },
+            {
+                "Description": "Previously used for",
+                "SubModules": null
+            },
+            {
+                "Description": "Refer equipment log for cleanliness",
+                "SubModules": null
+            },
+            {
+                "Description": "Cleanliness visually checked by",
+                "SubModules": null
+            },
+            {
+                "Description": "Area certified",
+                "SubModules": null
+            }
+        ]
+    },
+    "2": {
+        "Description": "CALIBRATION OF pH AND DO2 PROBES :",
+        "SubModules": [
+            {
+                "Description": "CALIBRATION OF 1st pH PROBE AND",
+                "SubModules": [
+                    {
+                        "Description": "Calibrate the pH probe using buffer 7.00",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Calibrate the pH probe using buffer 4.01",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Confirm calibration by checking the pH using",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Calibrate the DO2 probe",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "CALIBRATION OF 2nd pH PROBE AND",
+                "SubModules": [
+                    {
+                        "Description": "Calibrate the pH probe using buffer 7.00",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Calibrate the pH probe using buffer 4.01",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Confirm calibration by checking the pH using",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Calibrate the DO2 probe",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "Fix the 1st and 2nd pH probes in the designated port",
+                "SubModules": null
+            },
+            {
+                "Description": "Fix the 1st and 2nd DO2 probes in the designated port",
+                "SubModules": null
+            }
+        ]
+    },
+    "3": {
+        "Description": "LEAKAGE TEST",
+        "SubModules": [
+            {
+                "Description": "Replace the rubber septa of the inoculation ports with new ones.",
+                "SubModules": null
+            },
+            {
+                "Description": "Replace the vessel isolation actuated valve on the related RM solution feed",
+                "SubModules": null
+            },
+            {
+                "Description": "Charge  XX Kg of Potable water into the fermenter: ___________ Kg       A.R.No._________________",
+                "SubModules": null
+            },
+            {
+                "Description": "Set the Air flow to YY Nm3/hr",
+                "SubModules": null
+            },
+            {
+                "Description": "Pressurize the fermenter to ZZ bar.",
+                "SubModules": null
+            },
+            {
+                "Description": "Start the leakage check.",
+                "SubModules": null
+            },
+            {
+                "Description": "LEAKAGE CHECK RESULT",
+                "SubModules": [
+                    {
+                        "Description": "Exhaust Filter bottom",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Valve before exhaust",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust control valve joint",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Test end time and Date",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "LEAKAGE CHECK RESULT",
+                "SubModules": [
+                    {
+                        "Description": "Exhaust Filter bottom",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Valve before exhaust",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust control valve joint",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Test end time and Date",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "LEAKAGE CHECK RESULT",
+                "SubModules": [
+                    {
+                        "Description": "Exhaust Filter bottom",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Valve before exhaust",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust control valve joint",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Test end time and Date",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "LEAKAGE CHECK RESULT",
+                "SubModules": [
+                    {
+                        "Description": "Exhaust Filter bottom",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Valve before exhaust",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust control valve joint",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Test end time and Date",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "LEAKAGE CHECK RESULT",
+                "SubModules": [
+                    {
+                        "Description": "Exhaust Filter bottom",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Valve before exhaust",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust control valve joint",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Test end time and Date",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "LEAKAGE CHECK RESULT",
+                "SubModules": [
+                    {
+                        "Description": "Exhaust Filter bottom",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Valve before exhaust",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust control valve joint",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Test end time and Date",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "Test result",
+                "SubModules": null
+            },
+            {
+                "Description": "Details of failure and rectification / NA",
+                "SubModules": null
+            }
+        ]
+    },
+    "4": {
+        "Description": "VESSEL PRESSURE TEST -1 (PRESSURE HOLD TEST)",
+        "SubModules": [
+            {
+                "Description": "CRITERIA: Pressure drop should not be > 0.2 bar in 10 minutes to pass the test.",
+                "SubModules": null
+            },
+            {
+                "Description": "Test SP 1",
+                "SubModules": null
+            },
+            {
+                "Description": "Test Time",
+                "SubModules": null
+            },
+            {
+                "Description": "Air flow set Point",
+                "SubModules": null
+            },
+            {
+                "Description": "De-pressurise set point",
+                "SubModules": null
+            },
+            {
+                "Description": "Test Hysteresis",
+                "SubModules": null
+            },
+            {
+                "Description": "Confirm the parameters and start the test.",
+                "SubModules": null
+            },
+            {
+                "Description": "Test start Time and Date",
+                "SubModules": null
+            },
+            {
+                "Description": "Test End Time and Date",
+                "SubModules": null
+            },
+            {
+                "Description": "Test result",
+                "SubModules": null
+            },
+            {
+                "Description": "Accept the prompt",
+                "SubModules": null
+            },
+            {
+                "Description": "Details of failure and rectification / NA",
+                "SubModules": null
+            }
+        ]
+    },
+    "5": {
+        "Description": "ADDITIONAL SPARGER FINE FILTER",
+        "SubModules": [
+            {
+                "Description": "Fix the Air fine filters",
+                "SubModules": null
+            },
+            {
+                "Description": "Give YY Nm3/hr set point to Air flow control valve of",
+                "SubModules": null
+            },
+            {
+                "Description": "Start the filter sterilisation",
+                "SubModules": null
+            },
+            {
+                "Description": "Pre-sterilisation of the additional sparger fine filter",
+                "SubModules": null
+            },
+            {
+                "Description": "Sterilise the additional sparger fine filter by passing steam and maintain the steam pressure at 1.1 to 1.3 bar for 30 to 35 minutes.",
+                "SubModules": null
+            },
+            {
+                "Description": "ADDITIONAL SPARGER FINE FILTER STERILISATION CHART / NA",
+                "SubModules": [
+                    {
+                        "Description": "Initial",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "After 10 minutes",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "After 20 minutes",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "30th  to 35th minute",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Cool the filter to ambient temperature.",
+                        "SubModules": null
+                    }
+                ]
+            }
+        ]
+    },
+    "6": {
+        "Description": "MEDIA PREPARATION",
+        "SubModules": [
+            {
+                "Description": "Batch size",
+                "SubModules": null
+            },
+            {
+                "Description": "Receive media solution from A1 Block to the fermenter in A2 Block. Simultaneously switch\u02bbON\u02bc agitator of the fermenter and set the RPM  to YY \u00b1 Y",
+                "SubModules": null
+            },
+            {
+                "Description": "Total Qty. (XX Kg) of Product media solution",
+                "SubModules": [
+                    {
+                        "Description": "A1 Block Media Preparation Batch No.",
+                        "SubModules": null
+                    }
+                ]
+            }
+        ]
+    },
+    "7": {
+        "Description": "Vessel pressure test \u2013 2",
+        "SubModules": [
+            {
+                "Description": "CRITERIA: Pressure drop should not be > 0.2 bar in",
+                "SubModules": null
+            },
+            {
+                "Description": "Test Pressure",
+                "SubModules": null
+            },
+            {
+                "Description": "Test Time",
+                "SubModules": null
+            },
+            {
+                "Description": "Air flow set point",
+                "SubModules": null
+            },
+            {
+                "Description": "De-pressurise set point",
+                "SubModules": null
+            },
+            {
+                "Description": "Test Hysteresis",
+                "SubModules": null
+            },
+            {
+                "Description": "Confirm the parameters and start the test",
+                "SubModules": null
+            },
+            {
+                "Description": "Test start time and Date",
+                "SubModules": null
+            },
+            {
+                "Description": "Test End Time and Date",
+                "SubModules": null
+            },
+            {
+                "Description": "Test result",
+                "SubModules": null
+            },
+            {
+                "Description": "Accept the prompt",
+                "SubModules": null
+            },
+            {
+                "Description": "Details of failure and rectification / NA",
+                "SubModules": null
+            }
+        ]
+    },
+    "8": {
+        "Description": "MEDIA STERILISATION AND COOLING",
+        "SubModules": [
+            {
+                "Description": "Set the recipe parameters.",
+                "SubModules": null
+            },
+            {
+                "Description": "Heating 1 SP",
+                "SubModules": null
+            },
+            {
+                "Description": "Heating 2 SP",
+                "SubModules": null
+            },
+            {
+                "Description": "Sterilisation time",
+                "SubModules": null
+            },
+            {
+                "Description": "Sterilisation holding temperature and pressure",
+                "SubModules": null
+            },
+            {
+                "Description": "Heating hysteresis",
+                "SubModules": null
+            },
+            {
+                "Description": "Exhaust close temperature",
+                "SubModules": null
+            },
+            {
+                "Description": "Back pressure SP",
+                "SubModules": null
+            },
+            {
+                "Description": "Air flow SP",
+                "SubModules": null
+            },
+            {
+                "Description": "Cooling 1 SP",
+                "SubModules": null
+            },
+            {
+                "Description": "Cooling 2 SP",
+                "SubModules": null
+            },
+            {
+                "Description": "Filter checked",
+                "SubModules": null
+            },
+            {
+                "Description": "Confirm the parameters and start sterilisation.",
+                "SubModules": null
+            },
+            {
+                "Description": "Media sterilisation start time ____________ hours         8.15.1. Date : ____________",
+                "SubModules": null
+            },
+            {
+                "Description": "AIR FINE FILTER STERILISATION",
+                "SubModules": [
+                    {
+                        "Description": "Start the filter sterilisation",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Pre-sterilisation of the Air fine filter should be done for",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Sterilise the Air fine filter by passing steam and maintaining  the steam pressure at 1.1 to 1.3 bar for 30 to 35 minutes",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "AIR FINE FILTER STERILISATION CHART",
+                        "SubModules": [
+                            {
+                                "Description": "Initial",
+                                "SubModules": []
+                            },
+                            {
+                                "Description": "After 10 minutes",
+                                "SubModules": []
+                            },
+                            {
+                                "Description": "After 20 minutes",
+                                "SubModules": []
+                            },
+                            {
+                                "Description": "30th to 35th minute",
+                                "SubModules": []
+                            }
+                        ]
+                    },
+                    {
+                        "Description": "Accept the prompt for completion of sterilisation",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Cool the filter to ambient temperature",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Accept the prompt for completion of cooling",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "Open the vessel isolation valves on G Header line, Edenor feed line and L-Leucine feed line once the",
+                "SubModules": null
+            },
+            {
+                "Description": "Heating 1 SP (H1 \u2013 H1 \u00b0C)",
+                "SubModules": null
+            },
+            {
+                "Description": "Heating 2 SP (H2\u00b11 \u00b0C)",
+                "SubModules": null
+            },
+            {
+                "Description": "Sterilisation",
+                "SubModules": null
+            },
+            {
+                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
+                "SubModules": [
+                    {
+                        "Description": "Transfer line from 100L Fermenter.",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass line",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 4 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Sampling valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 5 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Harvest valve steam cross outlet line",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 6 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Man hole lid",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Additional sparger line/ NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Sampling dip rod line",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
+                "SubModules": [
+                    {
+                        "Description": "Transfer line from 100L Fermenter.",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass line",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 4 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Sampling valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 5 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Harvest valve steam cross outlet line",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 6 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Man hole lid",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Additional sparger line/ NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Sampling dip rod line",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "CHECK POINTS DURING STERILISATION (Tick in the appropriate box)",
+                "SubModules": [
+                    {
+                        "Description": "Transfer line from 100L Fermenter.",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Exhaust bypass line",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 4 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Sampling valve",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 5 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Harvest valve steam cross outlet line",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Spare nozzle 6 / NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Man hole lid",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Additional sparger line/ NA",
+                        "SubModules": null
+                    },
+                    {
+                        "Description": "Sampling dip rod line",
+                        "SubModules": null
+                    }
+                ]
+            },
+            {
+                "Description": "Close the vessel isolation valves on G Header line, RM and RM feed line.",
+                "SubModules": null
+            },
+            {
+                "Description": "Start cooling.",
+                "SubModules": null
+            },
+            {
+                "Description": "Air flow through additional",
+                "SubModules": null
+            },
+            {
+                "Description": "Back pressure SP (ZZ-ZZ bar)",
+                "SubModules": null
+            },
+            {
+                "Description": "Air flow SP (YY\u00b1YY Nm3/ hr)",
+                "SubModules": null
+            },
+            {
+                "Description": "Air pressure set point",
+                "SubModules": null
+            },
+            {
+                "Description": "Cooling 1 SP (C1 \u2013 C1 \u00b0C)",
+                "SubModules": null
+            },
+            {
+                "Description": "Start nutrient dosing and accept the prompt.",
+                "SubModules": null
+            },
+            {
+                "Description": "Set back pressure to 1.1 \u00b1 0.2 bar..",
+                "SubModules": null
+            },
+            {
+                "Description": "Line up sterilised Antifoam SAG 471 solution.",
+                "SubModules": null
+            },
+            {
+                "Description": "Close the Air bypass line.",
+                "SubModules": null
+            },
+            {
+                "Description": "Sparge Air through the media for 10 \u00b1 2 minutes",
+                "SubModules": null
+            },
+            {
+                "Description": "Check the pH of the media.",
+                "SubModules": null
+            },
+            {
+                "Description": "pH of the media has to be adjusted to pH1 \u00b1 pH1",
+                "SubModules": null
+            },
+            {
+                "Description": "pH of the media after adjustment.",
+                "SubModules": null
+            },
+            {
+                "Description": "Qty of  10% Base solution (w/w) /",
+                "SubModules": [
+                    {
+                        "Description": "Solution preparation No.",
+                        "SubModules": null
+                    }
+                ]
+            }
+        ]
+    },
+    "9": {
+        "Description": "INITIAL PARAMETERS SETTING",
+        "SubModules": [
+            {
+                "Description": "Set Back pressure to ZZ bar",
+                "SubModules": null
+            },
+            {
+                "Description": "Set Air flow to YY Nm3/ hr",
+                "SubModules": null
+            },
+            {
+                "Description": "Set Temperature to T1 \u00b0C",
+                "SubModules": null
+            },
+            {
+                "Description": "Set Agitator speed to A1 RPM",
+                "SubModules": null
+            },
+            {
+                "Description": "Calibrate the 1st DO2 to 100%.",
+                "SubModules": null
+            },
+            {
+                "Description": "Calibrate the 2nd DO2 to 100%.",
+                "SubModules": null
+            }
+        ]
+    },
+    "11": {
+        "Description": "INOCULATION",
+        "SubModules": [
+            {
+                "Description": "Set and confirm the recipe parameters.",
+                "SubModules": null
+            },
+            {
+                "Description": "Seed fermenter code.",
+                "SubModules": null
+            },
+            {
+                "Description": "pH of the inoculum.",
+                "SubModules": null
+            },
+            {
+                "Description": "PCV of the inoculum.",
+                "SubModules": null
+            },
+            {
+                "Description": "Age of the inoculum.",
+                "SubModules": null
+            },
+            {
+                "Description": "Inoculate the fermenter.",
+                "SubModules": null
+            },
+            {
+                "Description": "Start production.",
+                "SubModules": null
+            },
+            {
+                "Description": "Take post inoculation sample (POIS).",
+                "SubModules": null
+            },
+            {
+                "Description": "Check the pH of the post inoculation sample.",
+                "SubModules": null
+            }
+        ]
+    },
+    "12": {
+        "Description": "MONITORING THE FERMENTER",
+        "SubModules": null
+    },
+    "13": {
+        "Description": "UNKNOWN INSTRUCTION ",
+        "SubModules": null
+    },
+    "16": {
+        "Description": "HARVESTING CRITERIA",
+        "SubModules": [
+            {
+                "Description": "INSTRUCTION BY THE MANAGER / PRODUCTION INCHARGE",
+                "SubModules": [
+                    {
+                        "Description": "Stop feeding at: ___________ Log hr     16.3.2. Signature: __________________    17.3.3. Date: ________________",
+                        "SubModules": null
+                    }
+                ]
+            }
+        ]
+    },
+    "17": {
+        "Description": "SAMPLES FOR MICROBIOLOGICAL ANALYSIS:",
+        "SubModules": [
+            {
+                "Description": "In addition to the PIS and POIS samples, take sterile sample from 100kL fermenter every day starting from the 1st day",
+                "SubModules": null
+            }
+        ]
+    },
+    "18": {
+        "Description": "SAMPLES TO CHECK PRODUCT CONTENT (Pr.Cont.):",
+        "SubModules": null
+    },
+    "19": {
+        "Description": "CHECKING pH AND PCV OF THE BROTH",
+        "SubModules": null
+    },
+    "21": {
+        "Description": "DEVIATION DETAILS:",
+        "SubModules": null
+    }
+}

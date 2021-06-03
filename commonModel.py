@@ -1,6 +1,7 @@
-class instructionLevels :
-    def __init__(self, parentLevel, parentDescription, numberOfSubLvels):
-        self.parentLevel = parentLevel
-        self.parentDescription = parentDescription
-        self.numberOfSubLvels = numberOfSubLvels #True/False
-        
+class instruction :
+    def __init__(self,description):
+        self.description = description
+        self.numberOfChildren = None
+        self.value = None
+
+

@@ -3,7 +3,7 @@ from posixpath import join
 import configurations
 import itertools
 
-class instructionDetails :
+class instructionDetailParsing :
     def __init__(self, id, description, value_required, value_unit):
         self.id = id
         self.description = description

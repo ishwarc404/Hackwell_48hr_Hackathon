@@ -3,14 +3,13 @@ import docxpy
 import re
 
 #model class
-from dataClass_v1 import instructionDetails
-from commonModel import instructionLevels
+from dataClass_v1 import instructionDetailParsing
 
 #configurtions
 import configurations
 
-
-#common functions
+#functions
+import jsonConverter
 import commonFunctions
 
 
@@ -53,7 +52,7 @@ for currentIndex in range(0,len(text)):
         instruction_description = instruction_description[len(instruction_number):].lstrip()
 
 
-        data = instructionDetails(instruction_number,instruction_description, value_required, value_unit)
+        data = instructionDetailParsing(instruction_number,instruction_description, value_required, value_unit)
         
         #refactorData basically cleans it a little more
         data.refactorData()
@@ -146,7 +145,7 @@ while(iterationIndex < maxIndex):
     #if parent
     if(numberOfLevels == 1):
         if(levelNumbers[0] not in parentPools[0].keys()):
-            parentPools[0][levelNumbers[0]] = [commonFunctions.getDescriptionById(current_instruction_id, data_storage),[]]
+            parentPools[0][levelNumbers[0]] = {"Description": commonFunctions.getDescriptionById(current_instruction_id, data_storage),"SubModules":[]}
 
     # #means it is a sublevel
     if(numberOfLevels > 1):
@@ -157,47 +156,61 @@ while(iterationIndex < maxIndex):
         parentPoolKey = current_instruction_id[0:indexOfSplitDot]  #split it uptil the  dot # (numberOfLevels - 1)
         childPoolNumber = parentPoolNumber + 1
 
-
-        print("Current id:",current_instruction_id)
-        print("Parent pool key:",parentPoolKey)
-        print("Parent pool number:",parentPoolNumber)
-        print(parentPools[parentPoolNumber])
-        print("--- \n")
-
         try:
-            parentPools[parentPoolNumber][parentPoolKey][1].append(current_instruction_id[0:-1])
+            parentPools[parentPoolNumber][parentPoolKey]["SubModules"].append(current_instruction_id[0:-1])
         except:
-            parentPools[parentPoolNumber][parentPoolKey] = ["UNKNOWN INSTRUCTION",[]]
+            parentPools[parentPoolNumber][parentPoolKey] = {"Description": "UNKNOWN INSTRUCTION ","SubModules":[]}
 
-        parentPools[childPoolNumber][current_instruction_id[0:-1]] = [commonFunctions.getDescriptionById(current_instruction_id, data_storage),[]]
+        parentPools[childPoolNumber][current_instruction_id[0:-1]] = {"Description": commonFunctions.getDescriptionById(current_instruction_id, data_storage),"SubModules":[]}
 
 
 
     iterationIndex +=1
 
-print("LEVEL 0")
-for i in parentPools[0].keys():
-    if(len(parentPools[0][i])>0):
-        print("{}  = {} ".format(i,parentPools[0][i]))
+# print("LEVEL 0")
+# for i in parentPools[0].keys():
+#     if(len(parentPools[0][i])>0):
+#         print("{}  = {} ".format(i,parentPools[0][i]))
 
-print("\n \n")
-print("LEVEL 1")
-for i in parentPools[1].keys():
-    if(len(parentPools[1][i])>0):
-        print("{}  = {} ".format(i,parentPools[1][i]))
+# print("\n \n")
+# print("LEVEL 1")
+# for i in parentPools[1].keys():
+#     if(len(parentPools[1][i])>0):
+#         print("{}  = {} ".format(i,parentPools[1][i]))
 
 
-print("\n \n")
-print("LEVEL 2")
-for i in parentPools[2].keys():
-    if(len(parentPools[2][i])>0):
-        print("{}  = {} ".format(i,parentPools[2][i]))
+# print("\n \n")
+# print("LEVEL 2")
+# for i in parentPools[2].keys():
+#     if(len(parentPools[2][i])>0):
+#         print("{}  = {} ".format(i,parentPools[2][i]))
 
-print("\n \n")
-print("LEVEL 3")
-for i in parentPools[3].keys():
-    if(len(parentPools[3][i])>0):
-        print("{}  = {} ".format(i,parentPools[3][i]))
+# print("\n \n")
+# print("LEVEL 3")
+# for i in parentPools[3].keys():
+#     if(len(parentPools[3][i])>0):
+#         print("{}  = {} ".format(i,parentPools[3][i]))
+
+
+
+
+print("[INFO]: STEP 8 CONVERT INTO JSON")
+ 
+jsonConverter.convertToJSON(parentPools)
+
+
+print("[INFO]: STEP 8 CONVERT INTO JSON COMPLETED")
+
+
+
+
+
+
+
+
+
+
+
 
        
 # #Now that we have the parent indices, we need to find how many sub instructions each parent has
