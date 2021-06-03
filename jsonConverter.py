@@ -28,7 +28,14 @@ def convertToJSON(parentPools):
         level-=1
 
     # we need to post this JSON onto the API server as well
-    requests.post("https://json.extendsclass.com/bin/c7bb0eede540", parentPools[0])
+    url = 'https://api.jsonbin.io/v3/b/60b8f01d2d9ed65a6a7ede39'
+    headers = {
+    'Content-Type': 'application/json',
+    'X-Master-Key': '$2b$10$sBckZTunpNsmdwc0xPC5z.52q0gtCaWifXquNDipFBGY3d9ZF/pgS'
+    }
+    data = parentPools[0]
+
+    requests.put(url, json=data, headers=headers)
 
 
     with open('result.json', 'w') as fp:

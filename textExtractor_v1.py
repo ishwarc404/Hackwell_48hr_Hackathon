@@ -170,6 +170,11 @@ while(iterationIndex < maxIndex):
                 for each in tempvalue:
                     new_value += each + " "
                 data_storage = commonFunctions.updateDataStorage(current_instruction_id, new_value, change_requested , data_storage)
+        
+        #we need to clear the text file now
+        file =  open('changes.txt', 'r+')
+        file.truncate(0)
+        file.close
                 
                 
 
@@ -238,9 +243,9 @@ while(iterationIndex < maxIndex):
 
 print("[INFO]: STEP 8 CONVERT INTO JSON")
 
-#WE ARE STORING THE PARENT POOLS INTO A JSON FILE, SO THAT THE USER CAN MODIFY IT WHILE USING FLASK AND CHANGEEXECUTER.PY
-with open('parentPools.json', 'w') as fp:
-    json.dump({"data":parentPools}, fp)
+# #WE ARE STORING THE PARENT POOLS INTO A JSON FILE, SO THAT THE USER CAN MODIFY IT WHILE USING FLASK AND CHANGEEXECUTER.PY
+# with open('parentPools.json', 'w') as fp:
+#     json.dump({"data":parentPools}, fp)
  
 jsonConverter.convertToJSON(parentPools)
 
