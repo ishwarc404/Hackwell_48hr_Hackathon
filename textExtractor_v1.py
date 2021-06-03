@@ -135,15 +135,12 @@ def findDotIndex(id):
 #first we need to seperate out the parent instruction indices
 parentIndices = []
 while(iterationIndex < maxIndex):
-    # print(parentPools[0])
-    # print(parentPools[1])
-    # print("-------")
+
     current_instruction_id = instruction_ids[iterationIndex]
     numberOfLevels = current_instruction_id.count(".")
     levelNumbers  = current_instruction_id.split(".")
     levelNumbers.remove('')
     #these level numbers are in string format, need to convert into number
-    # levelNumbers = [int(i) for i in levelNumbers]
     indexOfDots = findDotIndex(current_instruction_id)
 
     #if parent
@@ -166,15 +163,11 @@ while(iterationIndex < maxIndex):
         print("Parent pool number:",parentPoolNumber)
         print(parentPools[parentPoolNumber])
         print("--- \n")
-        # print("Ch id:",current_instruction_id)
-        # print("Current id:",current_instruction_id)
 
         try:
             parentPools[parentPoolNumber][parentPoolKey][1].append(current_instruction_id[0:-1])
         except:
             parentPools[parentPoolNumber][parentPoolKey] = ["UNKNOWN INSTRUCTION",[]]
-        #     parentPools[parentPoolNumber][parentPoolKey][1].append(current_instruction_id[0:-1])
-
 
         parentPools[childPoolNumber][current_instruction_id[0:-1]] = [commonFunctions.getDescriptionById(current_instruction_id, data_storage),[]]
 
