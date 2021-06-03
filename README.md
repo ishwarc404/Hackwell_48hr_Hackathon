@@ -11,7 +11,8 @@
  - Step 2: Moved onto testing with the original data set Observation : good result while using the numerical way
  - Step 3: Create a class and assemble related data field of the procedures together
  - Step 4: Add a unit mapper in case the representation is different (pcv -> %)
- - Step 5: We need to now include some form of NLP so that we can distinguished some of the instructions
+ - Step 5: Provide user with multiple options to select unit where the algorithm is not so sure
+ - Step 6: We need to now include some form of NLP so that we can distinguished some of the instructions
 
 
 

@@ -1,5 +1,6 @@
 from posixpath import join
 import configurations
+import itertools
 
 class instructionDetails :
     def __init__(self, id, description, value_required, value_unit):
@@ -11,10 +12,12 @@ class instructionDetails :
         #type of instruction - boolen, value
         #type of value - single, multiple, range
 
-
+    
     def refactorData(self):
         print("Id: {} Description: {}".format(self.id,self.description))
+
         if(self.value_required):
+            
             #we need to remove any duplicates from the units list
             self.value_unit = sorted(set(self.value_unit), key = self.value_unit.index)
 
@@ -31,15 +34,58 @@ class instructionDetails :
                 for k in self.value_unit:
                     joint_unit+= k
                 
-                #we accept it only if it is allowed, else we keep 
-                if(joint_unit in configurations.units):
-                    self.value_unit = joint_unit
-                    self.value_required = True
-                    
-                    #need to map - PCV is measured in %
-                    self.value_unit = self.unitsMap(self.value_unit)
-                    if(self.value_unit != ''):
-                        print("Value required and it's unit is: {}".format(self.value_unit))
+                unit_allowed = False
+                if (joint_unit not in configurations.units):
+                    unit_allowed = False
+                else:
+                    unit_allowed = True
+
+                
+                #converting joint_unit into a list
+                joint_unit = [joint_unit]
+
+
+           
+
+            #if the first check fails
+            if(unit_allowed == False):
+            #we can do a few more operations, maybe some combination don't fit well together
+            #we can get all permutation and combinations of those units toghether
+                unit_permutations = list(itertools.permutations(self.value_unit))
+                unit_permutations.extend(self.value_unit) #we need to include the originals into the permutation set
+                possible_allowed = []
+                for each_permutation in unit_permutations:
+                    #each permutation is a tuple, we need to join them
+                    temporary = ''
+                    for k in each_permutation:
+                        temporary+= k
+                    if (temporary in configurations.units):
+                        possible_allowed.append(each_permutation)
+
+                #we can just suggest the user all these possible units
+                #let the user pick
+                if(len(possible_allowed)>0):
+                    unit_allowed = True
+                    #joint unit is nothing but a list now
+                    joint_unit = possible_allowed
+
+                else:
+                    unit_allowed = False
+
+
+            #we accept it only if it is allowed, else we keep 
+            if(unit_allowed):
+                self.value_unit = joint_unit
+                self.value_required = True
+                
+                new_after_map = []
+                for each_allowed in self.value_unit:
+                    new_after_map.append(each_allowed) #need to map - PCV is measured in %
+
+                self.value_unit = new_after_map
+                
+                if(self.value_unit != ''):
+                    print("Value required and it's unit is: {}".format(self.value_unit))
 
         print("\n")
 

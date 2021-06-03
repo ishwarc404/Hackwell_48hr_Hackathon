@@ -20,6 +20,7 @@ text = text.split("\n")
 instructions_number_regex = re.compile('^\d\d?[.]+\d?.?')
 instructions_description_regex = re.compile('^\d\d?[.]+\d?.?([ ]*[A-Z|a-z]*|[ ]*)+')
 
+text = ['19. CHECKING pH AND PCV OF THE BROTH',' 16.3.1. Stop feegggmgding at: ___________ Log hr     16.3.2. Signature: __________________    17.3.3. Date: ________________', '1.2 Configurhrsdw']
 
 procedure_indices = []
 for currentIndex in range(0,len(text)):
