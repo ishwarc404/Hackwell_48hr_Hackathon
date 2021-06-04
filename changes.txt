@@ -1,4 +1,0 @@
-1.1 EDIT_INSTRUCTION tesitng
-1.1 DELETE_TYPE string
-21 ADD_UNIT Kg
-21 ADD_TYPE number

@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from flask_cors import CORS
 import json
 import changeExecuter
@@ -185,7 +185,18 @@ def refreshChanges():
     return "200"  
 
 
-    
+@app.route("/exportJSON")
+def exportJSON():
+    with open("result.json") as fp:
+        json = fp.read()
+    return Response(
+        json,
+        mimetype="text/json",
+        headers={"Content-disposition":
+                 "attachment; filename=result.json"})
+
+
+
 if __name__ == '__main__':
     
     # we need to clear the text file now
