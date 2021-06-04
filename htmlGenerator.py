@@ -26,7 +26,7 @@ def recursiveParse(data, path):
 
 def generateHTML():
 
-    header = "<div  style='margin-bottom:10px; margin-top: 10px;margin-left: 1000px;' class='d-flex justify-content-center'><h1>Results</h1> <button style='margin-left:700px;'  class='btn btn-light' onclick='refresh()'>Commit Changes and Refresh</button><a href='/exportJSON' style='margin-left:50px;margin-top:10px;' target='_blank'><button  class='btn btn-light' onclick='export()'>EXPORT JSON</button></a></div>"
+    header = "<div  style='margin-bottom:10px; margin-top: 10px;margin-left: 700px;' class='d-flex justify-content-center'><h1>Results</h1> <button style='margin-left:400px;'  class='btn btn-light' onclick='refresh()'>Commit Changes and Refresh</button><a href='/exportJSON' style='margin-left:50px;margin-top:10px;' target='_blank'><button  class='btn btn-light' onclick='export()'>EXPORT JSON</button></a></div>"
     outerWrapper = "<div  class='d-flex inline'><div>"
     with open('result.json') as f:
         data = json.load(f)
