@@ -1,3 +1,6 @@
+from commonModel import instruction
+import dataClass_v1
+
 def getDescriptionById(instructionID, data_storage):
     for each_instruction in data_storage:
         if (each_instruction.id == instructionID):
@@ -33,27 +36,32 @@ def getDetailsById(instructionID, data_storage):
 
 
 def updateDataStorage(instructionId, final_value, change_requested , data_storage):
+    
     try:
         for each_instruction in data_storage:
             if (each_instruction.id == instructionId):
                 if(change_requested == "ADD_UNIT"):
                     each_instruction.value_unit.append(final_value[0:-2]) #-2 strips off \n 
+                    print("[INFO]: DATA STORE UPDATED")   
                 if(change_requested == "DELETE_UNIT"):
                     each_instruction.value_unit.remove(final_value[0:-2]) #-2 strips off \n 
+                    print("[INFO]: DATA STORE UPDATED")   
 
                 #ADD is nothing but modified
                 if(change_requested == "ADD_TYPE"):
                     each_instruction.value_required = True
                     each_instruction.value_type = final_value[0:-2] #-2 strips off \n 
+                    print("[INFO]: DATA STORE UPDATED")   
                 if(change_requested == "DELETE_TYPE"):
                     each_instruction.value_required = False
                     each_instruction.value_type = None
+                    print("[INFO]: DATA STORE UPDATED")   
 
                 if(change_requested == "EDIT_INSTRUCTION"):
                     each_instruction.description = final_value[0:-2] #-2 strips off \n 
+                    print("[INFO]: DATA STORE UPDATED")   
 
-
-        print("[INFO]: DATA STORE UPDATED")   
+                
     except:
         pass 
     return data_storage

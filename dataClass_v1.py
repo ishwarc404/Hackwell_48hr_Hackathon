@@ -4,7 +4,7 @@ import configurations
 import itertools
 
 class instructionDetailParsing :
-    def __init__(self, instruction_number, description, value_required, value_unit):
+    def __init__(self, instruction_number, description, value_required=None, value_unit=None):
         self.id = instruction_number
         self.description = description
         self.value_required = value_required #True/False
