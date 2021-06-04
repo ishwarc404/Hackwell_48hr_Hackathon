@@ -200,7 +200,8 @@ def exportJSON():
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
-        f.save(f.filename)
+        f.save("original_data.docx")
+        print("[INFO]:Saving:",f.filename)
         os.system('python3 textExtractor_v1.py')
         return render_template("webpage.html")
 
@@ -215,6 +216,10 @@ def jsonViewer():
 
 @app.route('/', methods = ['GET', 'POST'])
 def main():
+    # we need to clear the text file now
+    file =  open('changes.txt', 'r+')
+    file.truncate(0)
+    file.close
     return render_template("index.html")
 
 
