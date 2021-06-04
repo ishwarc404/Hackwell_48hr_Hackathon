@@ -16,7 +16,7 @@ def createInput(submodule, path):
         value_reference_path += str(each) + "$"
 
     outerdiv_start = "<div class='d-flex inline' style='margin-bottom:10px'>"
-    label = "<br><h6 id={}' style='margin-right:10px ; margin-top:5px'>{} {} </h6>".format(value_reference_path,submodule["Id"], submodule["Description"])
+    label = "<br><h6 id='{}' style='margin-right:10px ; margin-top:5px'>{} {} </h6>".format(value_reference_path,submodule["Id"], submodule["Description"])
     field = ""
     if(submodule["Value Required"]):
         value_reference_path+="Value Unit" #adding the index to the reference path

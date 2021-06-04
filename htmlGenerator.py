@@ -4,18 +4,23 @@ import htmlCodeMapper
 
 
 def recursiveParse(data, path):
+
     if(data["SubModules"] == None):
         return htmlCodeMapper.createInput(data,path)
     
     original_path = path
     html = ""
+    
+    #to include parents as well,or else if they have children they will not have an html
+    label = "<h5 id={}' style='margin-right:10px ;'>{} {} </h5>".format(path,data["Id"], data["Description"])        
+    html += label
     path.append("SubModules")
     for eachModuleIndex in range(0,len(data["SubModules"])):
         path.append(eachModuleIndex)
         html += recursiveParse(data["SubModules"][eachModuleIndex],path)
         path.remove(eachModuleIndex)
 
-        
+
     return html
 
 
@@ -30,8 +35,8 @@ def generateHTML():
     html_data = htmlCodeMapper.init()
     for each in data.keys():
         path = [each]
-        label = "<br><h5 id={}' style='margin-right:10px ;'>{} {} </h5>".format(path,data[each]["Id"], data[each]["Description"])
-        html_data += htmlCodeMapper.divWrapperBegin()  + label + recursiveParse(data[each],path) +  htmlCodeMapper.divWrapperEnd()
+        # label = "<br><h5 id={}' style='margin-right:10px ;'>{} {} </h5>".format(path,data[each]["Id"], data[each]["Description"])        
+        html_data += htmlCodeMapper.divWrapperBegin()  + recursiveParse(data[each],path) +  htmlCodeMapper.divWrapperEnd()
 
 
     outerWrapperEnd = " </div><div><iframe  src='./jsonViewer.html' width='1000' height='6000' frameborder='0'></div></div> </div>"
