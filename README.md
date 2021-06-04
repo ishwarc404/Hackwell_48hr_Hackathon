@@ -26,3 +26,5 @@
 
 ### Bugs
 - Task Change of 16.3.1 does not work because it's id is 16.0.0 as there are taks missing
+- '2$SubModules$0$SubModules$0$Value UnitValue Type$Value Type' is the id of the type field, but is not causing any issues so it's fine.
+- '2$SubModules$0$SubModules$0$Value Type' - should be the id ideally (GET BACK TO IT LATER)

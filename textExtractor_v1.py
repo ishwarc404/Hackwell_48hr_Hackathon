@@ -128,8 +128,6 @@ for each in data_storage:
             elif(each.id.count(".") > parentLength and check_encountered):
                 each.value_type = "checkbox"
                 each.value_required = True
-                print("Checkbox for: ",each.id)
-                print("\n")
             else:
                 check_encountered = False
 
@@ -198,13 +196,9 @@ while(iterationIndex < maxIndex):
 
                 data_storage = commonFunctions.updateDataStorage(current_instruction_id, new_value, change_requested , data_storage)
         
-        # we need to clear the text file now
-        file =  open('changes.txt', 'r+')
-        file.truncate(0)
-        file.close
-                
-                
 
+        #  WE DO NOT TRUNCTATE THE FILE, AS THE INSTRUCTIONS WILL HAVE TO BE PERFORMED AGAIN
+        
         #if parent
         if(numberOfLevels == 1):
             if(levelNumbers[0] not in parentPools[0].keys()):
@@ -279,7 +273,6 @@ print("[INFO]: STEP 8 CONVERT INTO JSON COMPLETED")
 print("[INFO]: STEP 9 CONVERT INTO HTML")
 
 os.system('python3 htmlGenerator.py')
-os.system('open webpage.html')
 
 
 print("[INFO]: STEP 9 CONVERT INTO HTML COMPLETED")

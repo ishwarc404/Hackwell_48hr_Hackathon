@@ -187,6 +187,12 @@ def refreshChanges():
 
     
 if __name__ == '__main__':
+    
+    # we need to clear the text file now
+    file =  open('changes.txt', 'r+')
+    file.truncate(0)
+    file.close
+    
     app.run(debug=True)
 
 
