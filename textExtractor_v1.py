@@ -113,6 +113,28 @@ print('x-x-x-x-x \n')
 #     each.printData()
 
 
+#TO RECOGNIZE BOOLEAN KEYWORDS
+check_encountered = False
+parentLength = 0 #number of dots
+parentId = "" #to prevent the bug where 8.22. comes again after 8.22.6.
+
+for each in data_storage:
+    if(each.id != parentId):
+        if( not each.value_required):
+            if("check" in each.description.lower()):
+                check_encountered = True
+                parentLength = each.id.count(".")
+                parentId = each.id
+            elif(each.id.count(".") > parentLength and check_encountered):
+                each.value_type = "checkbox"
+                each.value_required = True
+                print("Checkbox for: ",each.id)
+                print("\n")
+            else:
+                check_encountered = False
+
+
+
 print("[INFO]: STEP 7 SUBLEVEL EXTRACTION")
 #we need to parse instruction_ids and get the data
 #Ananlsyis stage
@@ -277,9 +299,6 @@ print("[INFO]: STEP 9 CONVERT INTO HTML COMPLETED")
 # numberofChildren.append(indexofLastIntruction - indexofLastParent -1)
 # # print("Last children: ", indexofLastIntruction - indexofLastParent-1)
 # # print("Number of parent instructions: ")
-
-
-
 
 
 
