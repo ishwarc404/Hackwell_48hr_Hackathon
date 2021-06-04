@@ -32,11 +32,16 @@ def generateHTML():
         data = json.load(f)
     
 
+    batch_mode_checkbox_button1 = "<button id='{}' style='margin-left:10px' class='btn btn-outline-secondary' onclick=batchUpdateValueTypeBackend('value')>Batch Update Value</button>"
+    batch_mode_checkbox_button2 = "<button id='{}' style='margin-left:10px' class='btn btn-outline-secondary' onclick=batchUpdateValueTypeBackend('unitadd')>Batch add unit</button>"
+    batch_mode_checkbox_button3 = "<button id='{}' style='margin-left:10px' class='btn btn-outline-secondary' onclick=batchUpdateValueTypeBackend('unitdelete')>Batch delete unit</button>"
+
     html_data = htmlCodeMapper.init()
     for each in data.keys():
         path = [each]
-        # label = "<br><h5 id={}' style='margin-right:10px ;'>{} {} </h5>".format(path,data[each]["Id"], data[each]["Description"])        
-        html_data += htmlCodeMapper.divWrapperBegin()  + recursiveParse(data[each],path) +  htmlCodeMapper.divWrapperEnd()
+        html_data += htmlCodeMapper.divWrapperBegin()  + recursiveParse(data[each],path) + batch_mode_checkbox_button1 + batch_mode_checkbox_button2 + batch_mode_checkbox_button3 + htmlCodeMapper.divWrapperEnd()
+
+
 
 
     outerWrapperEnd = " </div><div><iframe  src='./jsonViewer.html' width='1000' height='6000' frameborder='0'></div></div> </div>"

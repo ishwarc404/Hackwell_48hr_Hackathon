@@ -81,7 +81,7 @@ def addDataType():
     
 
     with open('changes.txt', 'a+') as fp:
-        fp.write(instruction_id +" "+ "ADD_TYPE" + " " + new_value+ "\n")
+        fp.write(instruction_id +" "+ "ADD_TYPE" + " " + new_value+ "\n") #ADD IS NOTHING BUT MODIFY
 
     return "200"    
 
@@ -136,6 +136,47 @@ def editInstruction():
     return "200"    
 
 
+@app.route('/batchUpdate',methods=["POST"])
+def batchUpdate():
+    data = request.get_json()
+    print(data)
+    # data = json.loads(data)
+    new_value = data["value"]
+    path_to_values = data["path"]
+    
+    value_type = data["valueType"] #VALUE TYPE OR UNIT
+    TYPE_OF_UPDATE = "ADD_TYPE"
+    if(value_type == 'unitadd'):
+        TYPE_OF_UPDATE = "ADD_UNIT"
+    if(value_type == 'unitdelete'):
+        TYPE_OF_UPDATE = "DELETE_UNIT"
+
+
+
+
+    single_paths = []
+    for each in path_to_values:
+        single_paths.append(each.split("$"))
+
+
+    # we will store these paths and values onto a new file, and batch process them later
+    #we need to figure out the instruction number first
+    final_paths =  []
+
+    for each in single_paths:
+        numbers = [k for k in each if(k.isdigit())]
+        instruction_id = ""
+        for i in range(0, len(numbers)):
+            if(i==0):
+                instruction_id+=numbers[i]
+            else:
+                instruction_id+="."+str(int(numbers[i])+1) #adding 1 because it is 1.1 not 1.0
+    
+
+        with open('changes.txt', 'a+') as fp:
+            fp.write(instruction_id +" "+ TYPE_OF_UPDATE + " " + new_value+ "\n")
+
+    return "200"  
 
 
 @app.route('/refreshPage',methods=["GET"])

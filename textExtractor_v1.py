@@ -173,15 +173,13 @@ while(iterationIndex < maxIndex):
                 new_value = ''
                 for each in tempvalue:
                     new_value += each + " "
-                # print(new_value)
-                # print(change_requested)
-                # print("------- \n")
+
                 data_storage = commonFunctions.updateDataStorage(current_instruction_id, new_value, change_requested , data_storage)
         
-        #we need to clear the text file now
-        # file =  open('changes.txt', 'r+')
-        # file.truncate(0)
-        # file.close
+        # we need to clear the text file now
+        file =  open('changes.txt', 'r+')
+        file.truncate(0)
+        file.close
                 
                 
 
