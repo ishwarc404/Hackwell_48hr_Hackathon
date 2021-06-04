@@ -32,7 +32,7 @@ def addDataUnit():
     with open('changes.txt', 'a+') as fp:
         fp.write(instruction_id +" "+ "ADD_UNIT" + " " + new_value+ "\n")
 
-    return "200"    
+    return render_template("webpage.html")    
 
 
 @app.route('/deleteDataUnit',methods=["POST"])
@@ -57,7 +57,7 @@ def deleteDataUnit():
     with open('changes.txt', 'a+') as fp:
         fp.write(instruction_id +" "+ "DELETE_UNIT" + " " + new_value+ "\n")
 
-    return "200"    
+    return render_template("webpage.html")    
 
 
 #this takes care of adding any new field
@@ -83,7 +83,7 @@ def addDataType():
     with open('changes.txt', 'a+') as fp:
         fp.write(instruction_id +" "+ "ADD_TYPE" + " " + new_value+ "\n") #ADD IS NOTHING BUT MODIFY
 
-    return "200"    
+    return render_template("webpage.html")    
 
 
 @app.route('/deleteDataType',methods=["POST"])
@@ -108,7 +108,7 @@ def deleteDataType():
     with open('changes.txt', 'a+') as fp:
         fp.write(instruction_id +" "+ "DELETE_TYPE" + " " + new_value+ "\n")
 
-    return "200"    
+    return render_template("webpage.html")    
 
 
 @app.route('/editInstruction',methods=["POST"])
@@ -133,7 +133,7 @@ def editInstruction():
     with open('changes.txt', 'a+') as fp:
         fp.write(instruction_id +" "+ "EDIT_INSTRUCTION" + " " + new_value+ "\n")
 
-    return "200"    
+    return render_template("webpage.html")    
 
 
 @app.route('/batchUpdate',methods=["POST"])
@@ -176,13 +176,14 @@ def batchUpdate():
         with open('changes.txt', 'a+') as fp:
             fp.write(instruction_id +" "+ TYPE_OF_UPDATE + " " + new_value+ "\n")
 
-    return "200"  
+    
 
 
 @app.route('/refreshPage',methods=["GET"])
 def refreshChanges():
     os.system('python3 textExtractor_v1.py')
-    return "200"  
+    return render_template("webpage.html")
+    return render_template("webpage.html")  
 
 
 @app.route("/exportJSON")
@@ -195,6 +196,31 @@ def exportJSON():
         headers={"Content-disposition":
                  "attachment; filename=result.json"})
 
+@app.route('/uploader', methods = ['GET', 'POST'])
+def upload_file():
+    if request.method == 'POST':
+        f = request.files['file']
+        f.save("original_data.docx")
+        print("[INFO]:Saving:",f.filename)
+        os.system('python3 textExtractor_v1.py')
+        return render_template("webpage.html")
+
+    return render_template("webpage.html")
+
+
+@app.route('/jsonViewer', methods = ['GET', 'POST'])
+def jsonViewer():
+      return render_template("jsonViewer.html")
+
+
+
+@app.route('/', methods = ['GET', 'POST'])
+def main():
+    # we need to clear the text file now
+    file =  open('changes.txt', 'r+')
+    file.truncate(0)
+    file.close
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
